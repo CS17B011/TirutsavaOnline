@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Azonix;
+  src: url(./Azonix.ttf);
+}
+
+nav {
+  font-family: Azonix;
+  color: #181129;
+}
+
+@media (max-width: 1123px) {
+  .toolbar_navigation-items a {
+    font-size: 0.9rem;
+  }
+}

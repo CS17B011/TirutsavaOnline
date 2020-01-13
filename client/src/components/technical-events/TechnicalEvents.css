@@ -1,0 +1,8 @@
+.technical-events {
+  background-image: url(background-technical.png);
+  height: 90vh;
+}
+
+canvas {
+  height: 90vh !important;
+}
