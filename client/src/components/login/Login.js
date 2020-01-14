@@ -41,6 +41,7 @@ class Login extends Component {
         <h1>LOGIN</h1>
         <div className="login-page log">
           <div className="box1"></div>
+
           <div className="box2">
             <div className="label ">
               <span className="big">E</span>
@@ -52,6 +53,7 @@ class Login extends Component {
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
+              required
             ></input>
             <div className="label ">
               <span className="big">P</span>
@@ -62,6 +64,7 @@ class Login extends Component {
               name="password"
               value={this.state.password}
               onChange={this.handleChange}
+              required
             ></input>
             <div className="buttongrp">
               <div className="buttons ">
@@ -69,6 +72,7 @@ class Login extends Component {
                 <button
                   className="btn-hover color-1"
                   onClick={this.handleSubmit}
+                  type="submit"
                 >
                   LOGIN
                 </button>
