@@ -17,7 +17,7 @@ export default function Head() {
             <MDBCardBody>
               <h2>Sponsership Head</h2>
               <p style={{ fontWeight: "bold" }}>Mr.XYZ</p>
-              <MDBIcon icon="phone-alt" /> +91XXXXXXXXX
+              <MDBIcon icon="phone" /> +91XXXXXXXXX
               <br />
               <MDBIcon icon="at" /> Xyz@gmail.com
             </MDBCardBody>
@@ -29,7 +29,7 @@ export default function Head() {
             <MDBCardBody>
               <h2>Marketing Head</h2>
               <p style={{ fontWeight: "bold" }}>Mr.XYZ</p>
-              <MDBIcon icon="phone-alt" /> +91XXXXXXXXX
+              <MDBIcon icon="phone" /> +91XXXXXXXXX
               <br />
               <MDBIcon icon="at" /> Xyz@gmail.com
             </MDBCardBody>

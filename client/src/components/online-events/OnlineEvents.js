@@ -168,6 +168,7 @@ class OnlineEvents extends React.Component {
               {events.map(eve => {
                 return (
                   <OnlineEventCard
+                    key={eve.eventId}
                     height="50"
                     price="50"
                     id={eve.eventId}
@@ -200,6 +201,7 @@ class OnlineEvents extends React.Component {
               {events.map(eve => {
                 return (
                   <OnlineEventCard
+                    key={eve.eventId}
                     height="35"
                     price="50"
                     id={eve.eventId}

@@ -25,7 +25,7 @@ const toolbar = props => (
       </div>
       <div className="spacer" />
       <div className="toolbar_navigation-items">
-        <ul>
+        <ul id="navit">
           <li>
             <Link to="/">HOME</Link>
           </li>
@@ -36,7 +36,13 @@ const toolbar = props => (
             <Link to="/testimonials">TESTIMONIALS</Link>
           </li>
           <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
             <Link to="/events">EVENTS</Link>
+          </li>
+          <li>
+            <Link to="/sponsors">SPONSORS</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>

@@ -169,6 +169,7 @@ class Prefest extends React.Component {
               {events.map(eve => {
                 return (
                   <CulturalCard
+                    key={eve.eventId}
                     height="50"
                     price="50"
                     type="2"
@@ -202,6 +203,7 @@ class Prefest extends React.Component {
               {events.map(eve => {
                 return (
                   <CulturalCard
+                    key={eve.eventId}
                     type="2"
                     height="35"
                     price="50"

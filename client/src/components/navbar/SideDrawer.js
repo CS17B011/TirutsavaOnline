@@ -39,7 +39,7 @@ const SideDrawer = props => {
           <Link to="/gallery">GALLERY</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/sponsers">SPONSORS</Link>
+          <Link to="/sponsors">SPONSORS</Link>
         </li>
         <li className="move" onClick={props.click}>
           <Link className="special-button" id="onReg" to="/login">

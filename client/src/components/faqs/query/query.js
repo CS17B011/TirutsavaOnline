@@ -14,13 +14,14 @@ const EdgeHeaderPage = props => {
   return (
     <MDBContainer fluid className="mt-3">
       <MDBEdgeHeader
-        style={{
-          backgroundImage:
-            "url('https://steemitimages.com/DQmPfGvYUqg9TUsaK8EUegqL2gVGR8FSS67FtYRs86UfUP1/help-and-support.png')",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center"
-        }}
+        style={{ background: "#1e1534" }}
+        // style={{
+        //   backgroundImage:
+        //     "url('https://steemitimages.com/DQmPfGvYUqg9TUsaK8EUegqL2gVGR8FSS67FtYRs86UfUP1/help-and-support.png')",
+        //   backgroundSize: "contain",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundPosition: "center"
+        // }}
       ></MDBEdgeHeader>
       <MDBFreeBird>
         <MDBRow>
@@ -44,11 +45,11 @@ const EdgeHeaderPage = props => {
                   type="textarea"
                   rows="2"
                   label="Textarea"
-                  icon="pencil-alt"
+                  icon="pencil"
                 />
                 <div className="buttons">
                   {" "}
-                  <button className="btn-hover color-1">HERE</button>
+                  <button className="bt-hover color-1">HERE</button>
                 </div>
               </form>
               <div className="my-2">

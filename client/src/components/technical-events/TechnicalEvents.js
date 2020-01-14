@@ -98,6 +98,7 @@ class TechnicalEvents extends React.Component {
               {events.map(eve => {
                 return (
                   <TechnicalEventCard
+                    key={eve.eventId}
                     height="50"
                     price="50"
                     id={eve.eventId}
@@ -130,6 +131,7 @@ class TechnicalEvents extends React.Component {
               {events.map(eve => {
                 return (
                   <TechnicalEventCard
+                    key={eve.eventId}
                     height="35"
                     price="50"
                     id={eve.eventId}
