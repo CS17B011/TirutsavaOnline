@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./page.css";
 import Logo from "./logo.png";
 
 export default function Page() {
   return (
-    <div>
+    <div style={{ height: "90vh" }} className="cover">
       <img src={Logo} alt="" className="hammer" />
       <div class="logo" style={{ marginBottom: "0" }}>
         <b>

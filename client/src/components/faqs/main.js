@@ -1,24 +1,171 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import FAQ from "./FAQ";
 import "./index.css";
 import { MDBContainer, MDBJumbotron } from "mdbreact";
 import { Link } from "react-router-dom";
 import Search from "./searchbar/search";
-import axios from 'axios';
+import axios from "axios";
 
 const App = () => {
-  const [faqs, setfaqs] = useState([]);
+  const [faqs, setfaqs] = useState([
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
 
-  useEffect(() => {
-    axios.get('/api/faqs')
-    .then(res => {
-      setfaqs(res.data);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-  },[]);
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    },
+    {
+      question: "How many programmers does it take to make a website?",
+      answer: "Dont't Know.",
+      open: false
+    },
+    {
+      question: "Who is most awesome person?",
+      answer: "You. ",
+      open: false
+    },
+    {
+      question:
+        "How many questions does it take to make a successful FAQ Page?",
+      answer: "This many.",
+      open: false
+    }
+  ]);
 
   const [showfaqs] = useState(faqs);
 
@@ -90,7 +237,7 @@ const App = () => {
                 {" "}
                 <div className="buttons">
                   {" "}
-                  <button className="btn-hover color-7">HERE</button>
+                  <button className="bt-hover color-7">HERE</button>
                 </div>
               </Link>
             </h6>
