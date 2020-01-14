@@ -8,7 +8,7 @@ const SideDrawer = props => {
     drawerClasses = "side-drawer open";
   }
   const navLinks = document.querySelectorAll("li.move");
-  console.log(navLinks);
+
   navLinks.forEach((link, index) => {
     if (link.style.animation) {
       link.style.animation = "";

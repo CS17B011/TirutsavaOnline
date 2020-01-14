@@ -71,7 +71,7 @@ class Events extends React.Component {
             <source src={tech_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a className="link link--kukuri" href="#" data-letters="TECHNICAL">
+            <a className="link link--kukuri" href="/events/technical" data-letters="TECHNICAL">
               TECHNICAL
             </a>
           </div>
@@ -86,7 +86,7 @@ class Events extends React.Component {
             <source src={cult_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="#" data-letters="CULTURAL">
+            <a class="link link--kukuri" href="/events/cultural" data-letters="CULTURAL">
               CULTURAL
             </a>
           </div>
@@ -101,7 +101,7 @@ class Events extends React.Component {
             <source src={online_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="#" data-letters="ONLINE">
+            <a class="link link--kukuri" href="/events/online" data-letters="ONLINE">
               ONLINE
             </a>
           </div>
@@ -111,7 +111,7 @@ class Events extends React.Component {
             <source src={tech_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a className="link link--kukuri" data-letters="PREFEST">
+            <a className="link link--kukuri" data-letters="PREFEST" href="/comingsoon">
               PREFEST
             </a>
           </div>
@@ -121,7 +121,7 @@ class Events extends React.Component {
             <source src={cult_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="#" data-letters="WORKSHOP">
+            <a class="link link--kukuri" href="/comingsoon" data-letters="WORKSHOP">
               WORKSHOP
             </a>
           </div>
@@ -131,7 +131,7 @@ class Events extends React.Component {
             <source src={online_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="#" data-letters="INFORMALS">
+            <a class="link link--kukuri" href="/comingsoon" data-letters="INFORMALS">
               INFORMALS
             </a>
           </div>

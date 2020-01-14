@@ -5,45 +5,21 @@ const EventSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
-	date: {
-		type: String, //DDMMYYYY format
-		default: ""
+	eventId: {
+		type: Number,
+		default: 0
 	},
-	time: { //Starting time of the event
-		type: String, //HH:MM-(AM/PM)
-		default: ""
-	},
-	venue: {
-		type: String,
-		default: ""
-	},
-	entryFee: {
+	typeOfEvent: {
 		type: Number,
 		required: true
 	},
-	prize: {
-		type: Array, //Array of JSON object that is converted into string
+	description: {
+		type: String,
+		required: true
+	},
+	participants: {
+		type: Array,
 		default: []
-	},
-	typeOfEvent: {
-		type: String,
-		default: "Offline"
-	},
-	coordinatorContact: {
-		type: Array,  //Array of JSON object that is converted into string
-		required: true
-	},
-	shortDescription: {
-		type: String,
-		required: true
-	},
-	longDescription: {
-		type: String,
-		required: true
-	},
-	posterImage: {
-		type: String, //Path of that image + _(timestamp)
-		required: true
 	}
 });
 

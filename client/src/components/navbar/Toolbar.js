@@ -15,7 +15,7 @@ const toolbar = props => (
 
           <i className="arrow-right fa fas fa-greater-than fa-lg" />
         </Link> */}
-        <a class="navbar-brand" href="/">
+        <a className="navbar-brand" href="/">
           <img
             src={logo}
             style={{ height: "180px", width: "250px" }}

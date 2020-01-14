@@ -23,6 +23,8 @@ import Googleregister from "./components/googleregister/Googleregister";
 import Workshop from "./components/workshop/Workshop";
 import "aos/dist/aos.css";
 
+import CSOON from "./components/comming/coming";
+
 import Navbar from "./components/navbar/navbar";
 
 AOS.init();
@@ -77,6 +79,7 @@ const App = () => {
           <Route exact path="/events/online" component={OnlineEvents} />
           <Route exact path="/events/technical/:id" component={EventDetails} />
           <Route exact path="/events/online/:id" component={OnlineDetails} />
+          <Route exact path="/comingsoon" component={CSOON} />
           <Route
             exact
             path="/events/cultural/:id"

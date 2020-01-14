@@ -62,3 +62,24 @@
 .event-details-text::-webkit-scrollbar-thumb {
   background-color: #39c3cb;
 }
+
+#poster {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+  transition: transform 1s;
+  overflow: hidden;
+}
+#poster:hover {
+  transform: scale(1.1);
+}
