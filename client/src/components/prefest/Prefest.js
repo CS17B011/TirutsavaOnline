@@ -1,14 +1,12 @@
 import React from "react";
 import {} from "react";
 import Coverflow from "react-coverflow";
-import OnlineEventCard from "../online-card/OnlineEventCard";
+import CulturalCard from "../cultural-card/CulturalCard";
 import MediaQuery from "react-responsive";
 import Particles from "react-particles-js";
 import axios from "axios";
 
-import "./OnlineEvents.css";
-
-class OnlineEvents extends React.Component {
+class Prefest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,22 +15,24 @@ class OnlineEvents extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("/api/events/type/3").then(res => {
-      console.log(res.data);
+    axios.get("/api/events/type/4").then(res => {
+      console.log(res.data, "prefets");
       this.setState({ events: res.data });
+      console.log("hey");
       // console.log(events);
     });
   }
 
   render() {
     const { events } = this.state;
+    console.log(events.length);
     if (events.length > 0)
       return (
-        <div className="online-events">
+        <div className="cultural-events">
           <Particles
             style={{
               width: "100%",
-              height: "90vh",
+              height: "100vh",
               position: "absolute"
             }}
             params={{
@@ -146,6 +146,7 @@ class OnlineEvents extends React.Component {
               retina_detect: true
             }}
           />
+
           <MediaQuery minDeviceWidth={769}>
             <Coverflow
               displayQuantityOfSide={2}
@@ -167,9 +168,10 @@ class OnlineEvents extends React.Component {
             >
               {events.map(eve => {
                 return (
-                  <OnlineEventCard
+                  <CulturalCard
                     height="50"
                     price="50"
+                    type="2"
                     id={eve.eventId}
                     eventInfo={eve}
                   />
@@ -199,7 +201,8 @@ class OnlineEvents extends React.Component {
             >
               {events.map(eve => {
                 return (
-                  <OnlineEventCard
+                  <CulturalCard
+                    type="2"
                     height="35"
                     price="50"
                     id={eve.eventId}
@@ -215,4 +218,4 @@ class OnlineEvents extends React.Component {
   }
 }
 
-export default OnlineEvents;
+export default Prefest;

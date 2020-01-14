@@ -21,6 +21,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Googleregister from "./components/googleregister/Googleregister";
 import Workshop from "./components/workshop/Workshop";
+import Prefest from "./components/prefest/Prefest";
 import "aos/dist/aos.css";
 
 import CSOON from "./components/comming/coming";
@@ -85,6 +86,7 @@ const App = () => {
             path="/events/cultural/:id"
             component={CulturalDetails}
           />
+          <Route exact path="/events/prefest/:id" component={CulturalDetails} />
           <Route exact path="/workshop" component={Workshop} />
 
           <Route
@@ -95,6 +97,7 @@ const App = () => {
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/query" component={Query} />
           <Route exact path="/sponsers" component={Sponsers} />
+          <Route exact path="/events/prefest" component={Prefest} />
         </Switch>
       </div>
     </Router>

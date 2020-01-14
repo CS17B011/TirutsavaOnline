@@ -1,7 +1,6 @@
 import React from "react";
 import "./page.css";
 import Logo from "./logo.png";
-import { MDBContainer } from "mdbreact";
 
 export default function Page() {
   return (

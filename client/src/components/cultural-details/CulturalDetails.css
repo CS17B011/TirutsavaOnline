@@ -1,0 +1,20 @@
+.adjustmentscult {
+  /* position: relative;
+      bottom: 70vh;
+      left: 2vw; */
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  left: 15%;
+  bottom: 66vh;
+
+  height: 77%;
+  width: 70%;
+  transition: all 1s;
+}
+
+@media screen and (min-width: 600px) {
+  .adjustmentscult:hover {
+    transform: scaleX(1.7) scaleY(1.4) translateX(20vw);
+  }
+}

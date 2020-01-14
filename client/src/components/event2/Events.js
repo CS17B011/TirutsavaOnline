@@ -71,7 +71,11 @@ class Events extends React.Component {
             <source src={tech_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a className="link link--kukuri" href="/events/technical" data-letters="TECHNICAL">
+            <a
+              className="link link--kukuri"
+              href="/events/technical"
+              data-letters="TECHNICAL"
+            >
               TECHNICAL
             </a>
           </div>
@@ -86,7 +90,11 @@ class Events extends React.Component {
             <source src={cult_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="/events/cultural" data-letters="CULTURAL">
+            <a
+              class="link link--kukuri"
+              href="/events/cultural"
+              data-letters="CULTURAL"
+            >
               CULTURAL
             </a>
           </div>
@@ -101,17 +109,30 @@ class Events extends React.Component {
             <source src={online_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="/events/online" data-letters="ONLINE">
+            <a
+              class="link link--kukuri"
+              href="/events/online"
+              data-letters="ONLINE"
+            >
               ONLINE
             </a>
           </div>
         </div>
-        <div className="slider-child child4">
+        <div
+          className="slider-child child4"
+          onClick={() => {
+            history.push(match.url + "/prefest");
+          }}
+        >
           <video className="video" autoPlay loop muted>
             <source src={tech_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a className="link link--kukuri" data-letters="PREFEST" href="/comingsoon">
+            <a
+              className="link link--kukuri"
+              data-letters="PREFEST"
+              href="/events/prefest"
+            >
               PREFEST
             </a>
           </div>
@@ -121,7 +142,11 @@ class Events extends React.Component {
             <source src={cult_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="/comingsoon" data-letters="WORKSHOP">
+            <a
+              class="link link--kukuri"
+              href="/comingsoon"
+              data-letters="WORKSHOP"
+            >
               WORKSHOP
             </a>
           </div>
@@ -131,7 +156,11 @@ class Events extends React.Component {
             <source src={online_vid} type="video/mp4" />
           </video>
           <div className="video-text">
-            <a class="link link--kukuri" href="/comingsoon" data-letters="INFORMALS">
+            <a
+              class="link link--kukuri"
+              href="/comingsoon"
+              data-letters="INFORMALS"
+            >
               INFORMALS
             </a>
           </div>

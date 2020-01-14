@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Frame from "../frames/online-frame.png";
 
-const OnlineEventCard = ({ height, price, eventId, history, match }) => {
+const OnlineEventCard = ({ height, price, eventInfo, history, match }) => {
+  const img = `http://localhost:4000/events_poster/${eventInfo.name}.JPG`;
   return (
-    <Link to={`/events/online/${eventId}`}>
+    <Link to={`/events/online/${eventInfo.eventId}`}>
       <div id="entire-card">
         <div
           style={{
@@ -19,15 +20,15 @@ const OnlineEventCard = ({ height, price, eventId, history, match }) => {
               backgroundImage: "url(" + Frame + ")"
             }}
           ></div>
-          <div id="poster-back">
-            {/* <div
+          <div id="poster-back-online">
+            <div
               id="poster"
               style={{
-                backgroundImage: "url(" + Pic + ")"
+                backgroundImage: `url(${img})`
               }}
             >
               <div className="info-box"></div>
-            </div> */}
+            </div>
           </div>
 
           <div

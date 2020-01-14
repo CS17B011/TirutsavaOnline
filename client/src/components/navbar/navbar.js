@@ -107,7 +107,10 @@ class navbar extends Component {
           drawer={this.sideDrawerHandler}
           xbtn={this.state.sideDrawerOpen}
         />
-        <SideDrawer show={this.state.sideDrawerOpen} />
+        <SideDrawer
+          show={this.state.sideDrawerOpen}
+          click={this.backdropHandler}
+        />
         {backdrop}
       </div>
     );

@@ -20,28 +20,28 @@ const SideDrawer = props => {
   return (
     <nav className={drawerClasses}>
       <ul className="link-tab">
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/">HOME</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/aboutus">ABOUT US</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/testimonials">TESTIMONIALS</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/events">EVENTS</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/faq">FAQs</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/gallery">GALLERY</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/sponsers">SPONSORS</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link className="special-button" id="onReg" to="/login">
             LOGIN
           </Link>
