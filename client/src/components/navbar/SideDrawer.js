@@ -36,12 +36,6 @@ const SideDrawer = props => {
           <Link to="/faq">FAQs</Link>
         </li>
         <li className="move">
-          <Link to="/gallery">GALLERY</Link>
-        </li>
-        <li className="move">
-          <Link to="/sponsers">SPONSORS</Link>
-        </li>
-        <li className="move">
           <Link className="special-button" id="onReg" to="/login">
             LOGIN
           </Link>
