@@ -3,7 +3,6 @@ import "./gallery.css";
 import Img from "./final.jpg";
 import {
   MDBCarousel,
-  MDBCarouselCaption,
   MDBCarouselInner,
   MDBCarouselItem,
   div,

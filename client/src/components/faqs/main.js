@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import FAQ from "./FAQ";
 import "./index.css";
 import { MDBContainer, MDBJumbotron } from "mdbreact";
 import { Link } from "react-router-dom";
 import Search from "./searchbar/search";
-import axios from "axios";
+// import axios from "axios";
 
 const App = () => {
   const [faqs, setfaqs] = useState([

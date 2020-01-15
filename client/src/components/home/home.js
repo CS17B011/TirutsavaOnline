@@ -54,7 +54,7 @@ export default function home() {
             minHeight: "500px",
             marginBottom: "0"
           }}
-          alt = {"Tirutsava Pic"}
+          alt={"Tirutsava Pic"}
         />
       </div>
     </div>

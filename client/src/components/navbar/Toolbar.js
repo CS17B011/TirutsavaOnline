@@ -9,12 +9,6 @@ const toolbar = props => (
     <nav className="toolbar__navigation">
       <div className="spacer2" />
       <div className="toolbar__logo">
-        {/* <Link to="/">
-          <i className="arrow-left fa fas fa-less-than fa-lg" />
-          <span className="logo-text">MINDSPRINT</span>
-
-          <i className="arrow-right fa fas fa-greater-than fa-lg" />
-        </Link> */}
         <a className="navbar-brand" href="/">
           <img
             src={logo}

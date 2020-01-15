@@ -11,7 +11,7 @@ import OnlineEvents from "./components/online-events/OnlineEvents";
 import AboutUs from "./components/about-us/AboutUs";
 import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/event2/Events";
-
+import Dash from "./components/dash/dash1";
 import Home from "./components/home/home";
 
 import Faq from "./components/faqs/main";
@@ -86,6 +86,7 @@ const App = () => {
             path="/events/cultural/:id"
             component={CulturalDetails}
           />
+          <Route exact path="/dashboard" component={Dash} />
           <Route exact path="/workshop" component={Workshop} />
 
           <Route
