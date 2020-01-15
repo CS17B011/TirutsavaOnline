@@ -8,7 +8,7 @@ const SideDrawer = props => {
     drawerClasses = "side-drawer open";
   }
   const navLinks = document.querySelectorAll("li.move");
-  console.log(navLinks);
+
   navLinks.forEach((link, index) => {
     if (link.style.animation) {
       link.style.animation = "";
@@ -20,22 +20,28 @@ const SideDrawer = props => {
   return (
     <nav className={drawerClasses}>
       <ul className="link-tab">
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/">HOME</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/aboutus">ABOUT US</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/testimonials">TESTIMONIALS</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/events">EVENTS</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
           <Link to="/faq">FAQs</Link>
         </li>
-        <li className="move">
+        <li className="move" onClick={props.click}>
+          <Link to="/gallery">GALLERY</Link>
+        </li>
+        <li className="move" onClick={props.click}>
+          <Link to="/sponsors">SPONSORS</Link>
+        </li>
+        <li className="move" onClick={props.click}>
           <Link className="special-button" id="onReg" to="/login">
             LOGIN
           </Link>

@@ -37,6 +37,7 @@ export default function home() {
               maxHeight: "90vh",
               width: "100%"
             }}
+            alt={"Tirutsava Logo"}
           />
         </div>
 
@@ -53,6 +54,7 @@ export default function home() {
             minHeight: "500px",
             marginBottom: "0"
           }}
+          alt = {"Tirutsava Pic"}
         />
       </div>
     </div>

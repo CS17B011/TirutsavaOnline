@@ -2,9 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Frame from "../frames/cult-frame.png";
 
-const CulturalCard = ({ height, price, eventId, history, match }) => {
+const CulturalCard = ({ height, price, eventInfo, history, match, type }) => {
+  const img = `http://localhost:4000/events_poster/${eventInfo.name}.JPG`;
   return (
-    <Link to={`/events/cultural/${eventId}`}>
+    <Link
+      to={`/events/${type === "2" ? "prefest" : "cultural"}/${
+        eventInfo.eventId
+      }`}
+    >
       <div id="entire-card">
         <div
           style={{
@@ -20,23 +25,13 @@ const CulturalCard = ({ height, price, eventId, history, match }) => {
             }}
           ></div>
           <div id="poster-back">
-            {/* <div
+            <div
               id="poster"
               style={{
-                backgroundImage: "url(" + Pic + ")"
+                backgroundImage: `url(${img})`
               }}
-            >
-              <div className="info-box"></div>
-            </div> */}
+            ></div>
           </div>
-
-          <div
-            onClick={() => console.log("we will redirect now")}
-            id="event-btn"
-          >
-            button...
-          </div>
-          <div className="price-tag">Rs.{price}</div>
         </div>
 
         <div className="description">Hello dds</div>

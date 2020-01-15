@@ -15,7 +15,7 @@ const toolbar = props => (
 
           <i className="arrow-right fa fas fa-greater-than fa-lg" />
         </Link> */}
-        <a class="navbar-brand" href="/">
+        <a className="navbar-brand" href="/">
           <img
             src={logo}
             style={{ height: "180px", width: "250px" }}
@@ -25,7 +25,7 @@ const toolbar = props => (
       </div>
       <div className="spacer" />
       <div className="toolbar_navigation-items">
-        <ul>
+        <ul id="navit">
           <li>
             <Link to="/">HOME</Link>
           </li>
@@ -36,7 +36,13 @@ const toolbar = props => (
             <Link to="/testimonials">TESTIMONIALS</Link>
           </li>
           <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
             <Link to="/events">EVENTS</Link>
+          </li>
+          <li>
+            <Link to="/sponsors">SPONSORS</Link>
           </li>
           <li>
             <Link to="/faq">FAQs</Link>

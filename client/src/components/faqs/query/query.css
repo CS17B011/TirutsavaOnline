@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.btn-hover {
+.bt-hover {
   width: 200px;
   font-size: 16px;
   font-weight: 600;
@@ -28,7 +28,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.btn-hover:hover {
+.bt-hover:hover {
   background-position: 100% 0;
   moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -36,11 +36,11 @@
   transition: all 0.4s ease-in-out;
 }
 
-.btn-hover:focus {
+.bt-hover:focus {
   outline: none;
 }
 
-.btn-hover.color-1 {
+.bt-hover.color-1 {
   background-image: linear-gradient(
     to right,
     #25aae1,

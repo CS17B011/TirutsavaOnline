@@ -4,7 +4,7 @@
 }
 
 .login {
-  background-image: url(cultural-back.PNG);
+  background-image: url(registration-page.png);
   background-size: 100% 100%;
   font-family: "NTR", sans-serif;
   background-repeat: no-repeat;
@@ -150,7 +150,7 @@ button:focus {
 
 .donttext {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 

@@ -21,8 +21,11 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Googleregister from "./components/googleregister/Googleregister";
 import Workshop from "./components/workshop/Workshop";
+import Prefest from "./components/prefest/Prefest";
 import "aos/dist/aos.css";
-
+import NFOUND from "./components/notfound/notfound";
+import CSOON from "./components/comming/coming";
+import Gallery from "./components/gallery/gallery";
 import Navbar from "./components/navbar/navbar";
 
 AOS.init();
@@ -70,6 +73,7 @@ const App = () => {
           <Route exact path="/aboutus" component={AboutUs} />
           <Route exact path="/events" component={Events} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/gallery" component={Gallery} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/googleregister" component={Googleregister} />
           <Route exact path="/events/technical" component={TechnicalEvents} />
@@ -77,11 +81,13 @@ const App = () => {
           <Route exact path="/events/online" component={OnlineEvents} />
           <Route exact path="/events/technical/:id" component={EventDetails} />
           <Route exact path="/events/online/:id" component={OnlineDetails} />
+          <Route exact path="/comingsoon" component={CSOON} />
           <Route
             exact
             path="/events/cultural/:id"
             component={CulturalDetails}
           />
+          <Route exact path="/events/prefest/:id" component={CulturalDetails} />
           <Route exact path="/workshop" component={Workshop} />
 
           <Route
@@ -89,9 +95,11 @@ const App = () => {
             path="/testimonials"
             render={props => <Testimonials {...props} slides={slides} />}
           />
+          <Route exact path="/notfound" component={NFOUND} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/query" component={Query} />
-          <Route exact path="/sponsers" component={Sponsers} />
+          <Route exact path="/events/prefest" component={Prefest} />
+          <Route exact path="/sponsors" component={Sponsers} />
         </Switch>
       </div>
     </Router>

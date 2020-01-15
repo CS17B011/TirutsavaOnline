@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 1);
-  /* position: absolute; */
+  background: #1e1534;
+
   z-index: 9;
   height: 10vh;
 }
@@ -110,4 +110,8 @@
 }
 #onReg {
   transition-delay: 0.1s;
+}
+
+#navit li:hover {
+  transform: scale(1.1);
 }

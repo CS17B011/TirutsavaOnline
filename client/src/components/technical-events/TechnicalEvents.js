@@ -4,6 +4,7 @@ import Particles from "react-particles-js";
 import Coverflow from "react-coverflow";
 import TechnicalEventCard from "../technical-event-card/TechnicalEventCard";
 import MediaQuery from "react-responsive";
+import axios from "axios";
 
 import "./TechnicalEvents.css";
 
@@ -18,12 +19,11 @@ class TechnicalEvents extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(events => {
-        this.setState({ events: events });
-        // console.log(events);
-      });
+    axios.get("/api/events/type/1").then(res => {
+      console.log(res.data);
+      this.setState({ events: res.data });
+      // console.log(events);
+    });
   }
 
   render() {
@@ -95,28 +95,17 @@ class TechnicalEvents extends React.Component {
                 }
               }}
             >
-              <TechnicalEventCard height="50" price="50" eventId="123" />
-              <TechnicalEventCard height="50" price="50" eventId="124" />
-              <TechnicalEventCard height="50" price="50" eventId="125" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-              <TechnicalEventCard height="50" price="50" eventId="126" />
-
-              {/* {events.map(eve => {
-                return (s
-                  <TechnicalEventCard height="50" price="50" eventId={eve.id} />
+              {events.map(eve => {
+                return (
+                  <TechnicalEventCard
+                    key={eve.eventId}
+                    height="50"
+                    price="50"
+                    id={eve.eventId}
+                    eventInfo={eve}
+                  />
                 );
-              })*/}
+              })}
             </Coverflow>
           </MediaQuery>
 
@@ -139,11 +128,17 @@ class TechnicalEvents extends React.Component {
                 }
               }}
             >
-              <TechnicalEventCard height="35" price="50" />
-              <TechnicalEventCard height="35" price="50" />
-              <TechnicalEventCard height="35" price="50" />
-              <TechnicalEventCard height="35" price="50" />
-              <TechnicalEventCard height="35" price="50" />
+              {events.map(eve => {
+                return (
+                  <TechnicalEventCard
+                    key={eve.eventId}
+                    height="35"
+                    price="50"
+                    id={eve.eventId}
+                    eventInfo={eve}
+                  />
+                );
+              })}
             </Coverflow>
           </MediaQuery>
         </div>
