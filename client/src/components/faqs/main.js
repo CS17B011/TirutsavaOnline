@@ -9,159 +9,84 @@ import Search from "./searchbar/search";
 const App = () => {
   const [faqs, setfaqs] = useState([
     {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
+      question: "How do I register for tirutsava?",
+      answer: "You can register for tirutsava by going to the Register page on our website.",
       open: false
     },
     {
-      question: "Who is most awesome person?",
-      answer: "You. ",
+      question: "What are the dates for tirutsava?",
+      answer: "Tirutsava will be held from 31 January 2020 to 2 February 2020.",
       open: false
     },
     {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
+      question:"Am I eligible to register for events at Tirutsava?",
+      answer: "Any college/school student with a valid ID card can register for events",
       open: false
     },
     {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
+      question: "Are on-spot registrations allowed during the fest?",
+      answer: "On-spot registrations may or may not be allowed depending on the number of already registered participants. We suggest that you register online as soon as possible to prevent any unforeseen circumstances.",
       open: false
     },
     {
-      question: "Who is most awesome person?",
-      answer: "You. ",
+      question: "Why should I give my information in registration?",
+      answer: "All the details asked are relevant and are used to keep you updated about events at Tirutsava. All the information is kept safe.",
       open: false
     },
     {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
+      question: "What is the artist lineup for pro nites at Tirutsava?",
+      answer: "",
       open: false
     },
     {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
+      question: "How can I buy passes for pro nite?",
+      answer: "",
       open: false
     },
     {
-      question: "Who is most awesome person?",
-      answer: "You. ",
+      question: "Am I eligible to attend the pro nites?",
+      answer: "",
       open: false
     },
     {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
+      question:"Should I carry some ID card everytime?",
+      answer: "Yes, as security check are done at random intervals",
       open: false
     },
 
     {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
+      question: "Will I get a certificate for participation in competitions?",
+      answer: "Winners and finalists of each event will get an online certificate after Tirutsava",
       open: false
     },
     {
-      question: "Who is most awesome person?",
-      answer: "You. ",
+      question: "Will accommodation be provided by team tirutsava?",
+      answer: "Yes, accommodation will be provided.",
       open: false
     },
     {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
+      question:"What is the cost of accommodation facility?",
+      answer: "We charge on a night basis and we charge INR 250 for Non AC room and INR 300 for AC room.",
       open: false
     },
     {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
+      question: "What all does the accommodation facilities include?",
+      answer: "It includes basic hospitality facilities.",
       open: false
     },
     {
-      question: "Who is most awesome person?",
-      answer: "You. ",
+      question: "Does accommodation fee include food facility as well?",
+      answer: "No, accomodation fee doesn't include food facility.",
       open: false
     },
     {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
+      question: "What are the entry and exit timings of IIT-TP campus during Tirutsava?",
+      answer: "",
       open: false
     },
     {
-      question: "Who is most awesome person?",
-      answer: "You. ",
-      open: false
-    },
-    {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
-      open: false
-    },
-    {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
-      open: false
-    },
-    {
-      question: "Who is most awesome person?",
-      answer: "You. ",
-      open: false
-    },
-    {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
-      open: false
-    },
-    {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
-      open: false
-    },
-    {
-      question: "Who is most awesome person?",
-      answer: "You. ",
-      open: false
-    },
-    {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
-      open: false
-    },
-
-    {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
-      open: false
-    },
-    {
-      question: "Who is most awesome person?",
-      answer: "You. ",
-      open: false
-    },
-    {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
-      open: false
-    },
-    {
-      question: "How many programmers does it take to make a website?",
-      answer: "Dont't Know.",
-      open: false
-    },
-    {
-      question: "Who is most awesome person?",
-      answer: "You. ",
-      open: false
-    },
-    {
-      question:
-        "How many questions does it take to make a successful FAQ Page?",
-      answer: "This many.",
+      question: "Will parking spots be available?",
+      answer: "Yes,parking spots are available in the campus itself.",
       open: false
     }
   ]);
