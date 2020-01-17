@@ -36,12 +36,6 @@ const SideDrawer = props => {
           <Link to="/faq">FAQs</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/gallery">GALLERY</Link>
-        </li>
-        <li className="move" onClick={props.click}>
-          <Link to="/sponsors">SPONSORS</Link>
-        </li>
-        <li className="move" onClick={props.click}>
           <Link className="special-button" id="onReg" to="/login">
             LOGIN
           </Link>

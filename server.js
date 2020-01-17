@@ -21,7 +21,6 @@ mongoose
 //Routes
 
 app.use("/api/events", require("./routes/events.js"));
-app.use("/api/faqs", require("./routes/faqs.js"));
 app.use("/api/queries", require("./routes/queries.js"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "client/build")));

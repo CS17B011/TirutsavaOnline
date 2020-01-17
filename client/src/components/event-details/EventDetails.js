@@ -21,7 +21,7 @@ class EventDetails extends React.Component {
   render() {
     let img;
     if (this.state.event.name)
-      img = `http://localhost:4000/events_poster/${this.state.event.name}.JPG`;
+      img = `http://localhost:4000/events_poster/${this.state.event.name}.jpg`;
     else img = "";
     return (
       <div className="event-details">
@@ -37,13 +37,12 @@ class EventDetails extends React.Component {
           </h1>
           <p>{this.state.event.description}</p>
           <div style={{ alignContent: "center", boxAlign: "center" }}>
-            <button
-              className="btn btn-default btn-lg btn-primary"
-              href={`http://localhost:4000/events_rulebook/${this.state.event.name}.pdf`}
-            >
-              RuleBook
-            </button>
-            <button className="btn btn-default btn-lg btn-primary">
+            <a href={`http://localhost:4000/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
+              <button className="btn btn-default btn-lg btn-primary">
+                RuleBook
+              </button>
+            </a>
+            <button className="btn btn-default btn-lg btn-primary" href="https://www.instamojo.com/">
               Register+
             </button>
           </div>

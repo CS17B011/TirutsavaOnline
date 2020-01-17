@@ -21,7 +21,7 @@ class CulturalDetails extends React.Component {
   render() {
     let img;
     if (this.state.event.name)
-      img = `http://localhost:4000/events_poster/${this.state.event.name}.JPG`;
+      img = `http://localhost:4000/events_poster/${this.state.event.name}.jpg`;
     else img = "";
     return (
       <div className="online-details">
