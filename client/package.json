@@ -1,7 +1,7 @@
 {
   "name": "client",
-  "homepage": "http://www.tirutsava.in",
-  "proxy": "http://localhost:4000",
+  "homepage": "http://www.tirutsava.com",
+  "proxy": "http://localhost",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
