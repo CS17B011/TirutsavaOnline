@@ -5,7 +5,7 @@ import "./TechnicalEventCard.css";
 
 const TechnicalEventCard = ({ height, price, eventInfo ,history, match }) => {
 
-	const img = `http://localhost:4000/events_poster/${eventInfo.name}.jpg`;
+	const img = `http://localhost/events_poster/${eventInfo.name}.jpg`;
 
 	return (
 		<Link to={`/events/technical/${eventInfo.eventId}`}>

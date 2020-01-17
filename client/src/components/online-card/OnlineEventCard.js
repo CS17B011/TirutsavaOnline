@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Frame from "../frames/online-frame.png";
 
 const OnlineEventCard = ({ height, price, eventInfo, history, match }) => {
-  const img = `http://localhost:4000/events_poster/${eventInfo.name}.JPG`;
+  const img = `http://localhost/events_poster/${eventInfo.name}.JPG`;
   return (
     <Link to={`/events/online/${eventInfo.eventId}`}>
       <div id="entire-card">
