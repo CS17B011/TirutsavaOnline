@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 mongoose
-  .connect("mongodb://localhost/tirutsava2020", { useNewUrlParser: true })
+  .connect(process.env.DBURL, { useNewUrlParser: true })
   .then(() => console.log("Database is Connected..."))
   .catch(err => console.log(err));
 
@@ -30,6 +30,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("Server is running on Port: ", PORT);
 });
