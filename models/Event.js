@@ -20,6 +20,10 @@ const EventSchema = mongoose.Schema({
 	participants: {
 		type: Array,
 		default: []
+	},
+	entryfee: {
+		type: Number,
+		required: true
 	}
 });
 

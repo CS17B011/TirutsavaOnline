@@ -36,9 +36,17 @@ const SideDrawer = props => {
           <Link to="/faq">FAQs</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link className="special-button" id="onReg" to="/login">
-            LOGIN
-          </Link>
+          {
+            localStorage.getItem('loggedin') ?
+              <Link className="special-button" id="onReg" to="/logout">
+                LOGOUT
+            </Link>
+              :
+              <Link className="special-button" id="onReg" to="/login">
+                LOGIN
+            </Link>
+
+          }
         </li>
       </ul>
     </nav>

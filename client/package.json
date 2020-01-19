@@ -9,7 +9,7 @@
     "axios": "^0.19.1",
     "classnames": "^2.2.6",
     "mdbreact": "^4.24.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-countup": "^4.2.6",
@@ -22,7 +22,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.0",
     "react-scroll": "^1.7.15",
-    "react-youtube": "^7.9.0"
+    "react-youtube": "^7.9.0",
+    "sweetalert2": "^9.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

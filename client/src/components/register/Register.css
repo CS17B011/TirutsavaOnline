@@ -24,3 +24,23 @@
 .reg input {
   width: 90%;
 }
+
+.showit {
+  display: flex;
+}
+
+.dontshow {
+  display: none;
+}
+
+.login-page select {
+  border-radius: 15px;
+  font-size: 20px;
+  padding-left: 10px;
+  background-color: rgb(247, 243, 243);
+}
+
+.login-page select {
+  width: 90%;
+  height: 5vh;
+}
