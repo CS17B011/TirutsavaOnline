@@ -87,14 +87,9 @@ class Login extends Component {
 
 							<div className="or">OR</div>
 
-							<GoogleLogin
-								clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-								render={renderProps => (
-									<div className="buttons">
+							<div className="buttons">
 										{" "}
 										<button
-											onClick={renderProps.onClick}
-											disabled={renderProps.disabled}
 											className="btn-hover color-7"
 											style={{
 												transform: "scale(0.9)"
@@ -119,12 +114,44 @@ class Login extends Component {
 											</div>
 										</button>
 									</div>
+
+
+							{/*<GoogleLogin
+								clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+								render={renderProps => (
+									<div className="buttons">
+										{" "}
+										<button
+											onClick={renderProps.onClick}
+											disabled={renderProps.disabled}
+											className="btn-hover color-7"
+											style={{
+												transform: "scale(0.9)"
+											}}
+										>
+											<div
+												style={{
+													fontSize: "26px",
+													padding: "10px"
+												}}
+											>
+												<span style={{ color: "#176bef" }}>{`G`}</span>
+												<span style={{ color: "#FF3E30" }}>{`o`}</span>
+												<span style={{ color: "#F7B529" }}>{`o`}</span>
+												<span style={{ color: "#176bef" }}>{`g`}</span>
+												<span style={{ color: "#179c52" }}>{`l`}</span>
+												<span style={{ color: "#ff3e30" }}>{`e`}</span>
+												<span style={{ color: "#176bef" }}>{`  login`}</span>
+											</div>
+										</button>
+									</div>
 								)}
 								buttonText="Login"
 								onSuccess={this.responseGoogle}
 								onFailure={this.responseGoogle}
 								cookiePolicy={"single_host_origin"}
-							/>
+							/>*/}
+
 						</div>
 
 						<div className="donttext">Don't have an account?</div>

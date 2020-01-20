@@ -2,54 +2,76 @@ import React from "react";
 import Frame from "../frames/technical-frame.png";
 import "./EventDetails.css";
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 class EventDetails extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      event: {}
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			event: {}
+		};
+	}
 
-  componentDidMount() {
-    const { id } = this.props.match.params;
-    axios.get(`/api/events/${id}`).then(res => {
-      this.setState({ event: res.data });
-    });
-  }
+	componentDidMount() {
+		const { id } = this.props.match.params;
+		axios.get(`/api/events/${id}`).then(res => {
+			this.setState({ event: res.data });
+		});
+	}
 
-  render() {
-    let img;
-    if (this.state.event.name)
-      img = `http://localhost/events_poster/${this.state.event.name}.jpg`;
-    else img = "";
-    return (
-      <div className="event-details">
-        <div className="event-details-poster">
-          <img src={Frame} className="event-details-img" alt="Event Details" />
-          <img src={img} className="adjustments" alt="Event Details" />
-        </div>
-        <div className="event-details-text">
-          <h1 align="center">
-            <b>
-              <u>{this.state.event.name}</u>
-            </b>
-          </h1>
-          <p>{this.state.event.description}</p>
-          <div style={{ alignContent: "center", boxAlign: "center" }}>
-            <a href={`http://localhost/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
-              <button className="btn btn-default btn-lg btn-primary">
-                RuleBook
+	handlePayment = (e) => {
+		e.preventDefault();
+		if (this.state.event) {
+			axios.post('/api/events/register', this.state.event)
+				.then((res) => {
+					console.log(res.data.success);
+					if (res.data.success)
+					{
+						window.location.href = res.data.payment_request.longurl;
+					}
+					else {
+						Swal.fire({
+							icon: 'error',
+							title: 'Registration Failed!!',
+							text: 'If you are not logged in sign in first!'
+						})
+					}
+				})
+		}
+	}
+
+	render() {
+		let img;
+		if (this.state.event.name)
+			img = `http://localhost/events_poster/${this.state.event.name}.jpg`;
+		else img = "";
+		return (
+			<div className="event-details">
+				<div className="event-details-poster">
+					<img src={Frame} className="event-details-img" alt="Event Details" />
+					<img src={img} className="adjustments" alt="Event Details" />
+				</div>
+				<div className="event-details-text">
+					<h1 align="center">
+						<b>
+							<u>{this.state.event.name}</u>
+						</b>
+					</h1>
+					<p>{this.state.event.description}</p>
+					<div style={{ alignContent: "center", boxAlign: "center" }}>
+						<a href={`http://localhost/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
+							<button className="btn btn-default btn-lg btn-primary">
+								RuleBook
               </button>
-            </a>
-            <button className="btn btn-default btn-lg btn-primary" href="https://www.instamojo.com/">
-              Register+
+						</a>
+						<button className="btn btn-default btn-lg btn-primary" onClick={this.handlePayment}>
+							Register+
             </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default EventDetails;

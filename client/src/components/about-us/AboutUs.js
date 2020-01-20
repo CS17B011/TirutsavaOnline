@@ -46,14 +46,7 @@ const AboutUs = () => {
           data-aos-duration="500"
         >
           <div className="about-text">
-            Tirutsava is a conflation between technology and culture. The name
-            is derived from a fusion of the words ,"Tiru" , from Tirupati , the
-            city which houses our esteemed institute and "Utsava" which
-            literally translates to "festival". Tirutsava aims to celebrate
-            tradition and technology, not as two incompatible, self-reliant
-            fields , but as complementary concepts furthering societal
-            development. With this intent , we bring forth the "Tirutsava" in
-            Tirupati.
+          Tirutsava is the annual techno-cultural fest of IIT Tirupati. The name is derived from the fusion of the words, "Tiru", from Tirupati, the city which houses our esteemed institute and "Utsava" which literally translates to “festival”. It is all about lights, colors, wizardry and music, as we look for the best weekend of the year. With a plethora of interesting events to dabble hands into, we provide a launchpad for budding artists and technocrats to delve deeper into the fields of their choice.
           </div>
         </div>
       </div>

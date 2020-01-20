@@ -13,13 +13,14 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use(cookieSession({
 	maxAge: 3 * 24 * 60 * 60 * 1000,
 	keys: [process.env.COOKIEKEY]
-}))
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 mongoose
 	.connect(process.env.DBURL, { useNewUrlParser: true, useCreateIndex: true })
@@ -38,7 +39,7 @@ app.get('/jsonfail', (req, res) => {
 	res.send({ valid: false });
 })
 
-app.use("/api/events", require("./routes/events.js"));
+app.use("/api/events" ,require("./routes/events.js"));
 app.use("/api/queries", require("./routes/queries.js"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "client/build")));

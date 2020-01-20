@@ -4,6 +4,7 @@ const passport = require('passport');
 const LocalUser = require('../models/LocalUser.js');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const loggedin = require('../services/middleware');
 
 router.post('/registration', (req, res) => {
     LocalUser.findOne({ email: req.body.email })
@@ -34,20 +35,25 @@ router.post('/registration', (req, res) => {
         });
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', loggedin ,(req, res) => {
     req.logout();
     res.send({ logout: true });
 });
 
 router.post('/local', passport.authenticate('local', {failureRedirect:'/jsonfail'}), (req, res) => {
     console.log("User...");
-    console.log(req.user);
+    console.log(req.isAuthenticated());
     res.send({ valid: true ,user:req.user});
 });
 
 router.get('/google', passport.authenticate('google', {
     scope: ['profile', 'email']
 }))
+
+router.get('/dashboard', loggedin ,(req, res) => {
+    console.log("Dashboard");
+    console.log(req.session.passport);
+});
 
 //Call back Route
 router.get('/google/callback', passport.authenticate('google'), (req, res) => {

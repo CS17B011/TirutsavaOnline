@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const loggedin = require('../services/middleware');
 
 const Query = require('../models/Query.js');
 
@@ -18,7 +19,7 @@ router.get('/', (req,res) => {
 
 //Route POST queries/create
 //Adding new Question
-router.post('/create', (req,res) => {
+router.post('/create', loggedin ,(req,res) => {
   const newQuery = Query({
     question: req.body.question,
     email: req.body.email
@@ -28,21 +29,5 @@ router.post('/create', (req,res) => {
   .catch(err => res.json({"error":"Somethin went wrong in queries/create"}));
 });
 
-//Route PUT queries/update/id
-//Updating new Question
-router.put('/update/:id', (req,res) => {
-  Query.updateOne({"_id": req.params.id},
-      {$set: {"answer": req.body.answer , "date" : Date.now()}})
-      .then(answer => res.json(answer))
-      .catch(err => res.status(400).json({"msg" : "Bad Request!!"}));
-});
-
-//Route DELETE queries/delete/id
-//Delete Question
-router.delete('/delete/:id',(req,res) => {
-	Query.findById(req.params.id)
-		.then(item => item.remove().then(() => res.json({success: true})))
-		.catch(err => res.status(404).json({success:false}));
-});
 
 module.exports = router;

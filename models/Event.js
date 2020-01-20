@@ -24,6 +24,10 @@ const EventSchema = mongoose.Schema({
 	entryfee: {
 		type: Number,
 		required: true
+	},
+	isGroup: {
+		type: Boolean,
+		required: true
 	}
 });
 
