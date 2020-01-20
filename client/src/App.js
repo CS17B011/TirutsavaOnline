@@ -12,6 +12,8 @@ import AboutUs from "./components/about-us/AboutUs";
 import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/event2/Events";
 
+import Dash from "./components/dash/dash1.js";
+
 import Home from "./components/home/home";
 
 import Faq from "./components/faqs/main";
@@ -71,6 +73,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/dashboard" component={Dash} />
           <Route exact path="/events" component={Events} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/gallery" component={Gallery} />

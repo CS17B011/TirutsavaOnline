@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.8cd1bb7f.chunk.css",
-    "main.js": "/static/js/main.b1e92341.chunk.js",
-    "main.js.map": "/static/js/main.b1e92341.chunk.js.map",
+    "main.css": "/static/css/main.cbf87417.chunk.css",
+    "main.js": "/static/js/main.690515bc.chunk.js",
+    "main.js.map": "/static/js/main.690515bc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d07f956b.js",
     "runtime-main.js.map": "/static/js/runtime-main.d07f956b.js.map",
     "static/css/2.1c5f909d.chunk.css": "/static/css/2.1c5f909d.chunk.css",
-    "static/js/2.434bcdf7.chunk.js": "/static/js/2.434bcdf7.chunk.js",
-    "static/js/2.434bcdf7.chunk.js.map": "/static/js/2.434bcdf7.chunk.js.map",
+    "static/js/2.0275215d.chunk.js": "/static/js/2.0275215d.chunk.js",
+    "static/js/2.0275215d.chunk.js.map": "/static/js/2.0275215d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.51329ac6dc09691dae15838a4e4215e2.js": "/precache-manifest.51329ac6dc09691dae15838a4e4215e2.js",
+    "precache-manifest.0cbf5386c0e617c793a004216f59cb8f.js": "/precache-manifest.0cbf5386c0e617c793a004216f59cb8f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1c5f909d.chunk.css.map": "/static/css/2.1c5f909d.chunk.css.map",
-    "static/css/main.8cd1bb7f.chunk.css.map": "/static/css/main.8cd1bb7f.chunk.css.map",
-    "static/js/2.434bcdf7.chunk.js.LICENSE": "/static/js/2.434bcdf7.chunk.js.LICENSE",
+    "static/css/main.cbf87417.chunk.css.map": "/static/css/main.cbf87417.chunk.css.map",
+    "static/js/2.0275215d.chunk.js.LICENSE": "/static/js/2.0275215d.chunk.js.LICENSE",
     "static/media/navbar.css": "/static/media/Azonix.b8276efa.ttf",
     "static/media/mdb.css": "/static/media/arrow_right.8ef6a08c.svg",
     "static/media/AboutUs.css": "/static/media/about_logo.af6bb797.png",
@@ -26,7 +26,7 @@
     "static/media/all.min.css": "/static/media/fa-solid-900.f6121be5.woff2",
     "static/media/final.jpg": "/static/media/final.b9bce2f7.jpg",
     "static/media/hills.png": "/static/media/hills.9bad2663.png",
-    "static/media/logo.png": "/static/media/logo.f8caeb2b.png",
+    "static/media/logo.png": "/static/media/logo.9647029f.png",
     "static/media/online-back-vid.mp4": "/static/media/online-back-vid.ca0e6f43.mp4",
     "static/media/online-frame.png": "/static/media/online-frame.14bfe536.png",
     "static/media/Login.css": "/static/media/registration-page.4e771c2c.png",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.d07f956b.js",
     "static/css/2.1c5f909d.chunk.css",
-    "static/js/2.434bcdf7.chunk.js",
-    "static/css/main.8cd1bb7f.chunk.css",
-    "static/js/main.b1e92341.chunk.js"
+    "static/js/2.0275215d.chunk.js",
+    "static/css/main.cbf87417.chunk.css",
+    "static/js/main.690515bc.chunk.js"
   ]
 }

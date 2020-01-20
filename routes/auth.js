@@ -50,11 +50,53 @@ router.get('/google', passport.authenticate('google', {
     scope: ['profile', 'email']
 }))
 
-router.get('/dashboard', loggedin ,(req, res) => {
-    console.log("Dashboard");
-    console.log(req.session.passport);
-});
-
+router.get('/dashboard', (req, res) => {
+    var person = {};
+    var events = [];
+    var user = req.session.passport.user;
+    console.log("Printing User");
+  console.log(user);
+    person.name = user.name;
+    person.email = user.email;
+    person.college = user.college;
+    person.phonenum = user.phonenum;
+    person.state = user.state;
+  
+    for(var i=0;i<user.registeredeventids.length;i++){
+          var newEvent = {};
+          Event.findById(user.registeredeventids[i]).then(event => {
+            newEvent.name = event.name;
+            if(event.typeOfEvent === 1){
+              newEvent.type = "Technical";
+            }else if (event.typeOfEvent === 2) {
+              newEvent.type = "Cultural";
+            }else if (event.typeOfEvent === 3) {
+              newEvent.type = "Online";
+            }else if (event.typeOfEvent === 4) {
+              newEvent.type = "Prefest";
+            }else if (event.typeOfEvent === 5) {
+              newEvent.type = "Workshop";
+            }else if (event.typeOfEvent === 6) {
+              newEvent.type = "Informals";
+            }
+            newEvent.eventId = event.eventId;
+            events.push(newEvent);
+          })
+          .catch(err => console.error(err));
+        }
+    var output = {
+      person: person,
+      events: events
+    }
+    console.log("Final output");
+    console.log(output);
+    res.send(output);
+  });
+  
+  //Call back Route
+  router.get('/google/callback', passport.authenticate('google'), (req, res) => {
+      res.send(req.user);
+  });
 //Call back Route
 router.get('/google/callback', passport.authenticate('google'), (req, res) => {
     res.send(req.user);
