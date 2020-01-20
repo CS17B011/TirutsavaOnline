@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 mongoose
   .connect(
-    "mongodb+srv://Satyam:Satyam03@@devconnector-nbsgp.mongodb.net/test?retryWrites=true&w=majority",
+    "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false",
     { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Database is Connected..."))

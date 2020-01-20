@@ -13,7 +13,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/event2/Events";
 import Dash from "./components/dash/dash1";
 import Home from "./components/home/home";
-
+import Team from "./components/team/team";
 import Faq from "./components/faqs/main";
 import Query from "./components/faqs/query/query";
 import Sponsers from "./components/sponsers/sponsers";
@@ -26,6 +26,7 @@ import NFOUND from "./components/notfound/notfound";
 import CSOON from "./components/comming/coming";
 import Gallery from "./components/gallery/gallery";
 import Navbar from "./components/navbar/navbar";
+import ProShows from "./components/proshows/proshows";
 
 AOS.init();
 
@@ -69,6 +70,9 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/team" component={Team} />
+          <Route exact path="/proshows" component={ProShows} />
+
           <Route exact path="/aboutus" component={AboutUs} />
           <Route exact path="/events" component={Events} />
           <Route exact path="/login" component={Login} />

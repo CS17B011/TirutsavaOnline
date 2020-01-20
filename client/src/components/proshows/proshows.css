@@ -1,0 +1,26 @@
+.adjustments1 {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  transition: transform 1s;
+  z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .adjustments1:hover {
+    transform: scaleX(1.7) scaleY(1.7) translateX(10vw);
+  }
+}
+.adjustments2 {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  transition: transform 1s;
+  z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .adjustments2:hover {
+    transform: scaleX(1.7) scaleY(1.7) translateX(-12vw);
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "./tirutsava.png";
-import Heads from "./heads/heads";
+
 import List from "./lists/list";
 import "./sponsers.css";
 
@@ -49,7 +49,6 @@ export default function Sponsers() {
           </MDBRow>
         </MDBContainer>
 
-        <Heads />
         <List />
       </div>
     </>
