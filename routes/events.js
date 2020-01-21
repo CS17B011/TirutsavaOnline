@@ -61,7 +61,7 @@ router.post('/register', loggedin, (req, res) => {
 				data.purpose = event.name + ' Registration';
 				data.amount = event.entryfee;
 				data.buyer_name = user.name;
-				data.redirect_url = `http://tirutsava.com/api/events/register/callback?user_id=${user._id}&type=${type}&event_id=${event.eventId}`;
+				data.redirect_url = `http://localhost/api/events/register/callback?user_id=${user._id}&type=${type}&event_id=${event.eventId}`;
 				data.email = user.email;
 				data.send_mail = true;
 				data.allow_repeated_payments = false;
@@ -92,44 +92,38 @@ router.get('/register/callback', (req, res) => {
 	console.log(responseData);
 	console.log("Callback");
 	if (responseData.type === 'local') {
-		LocalUser.findOne({ _id: responseData.user_id })
-			.then((user) => {
-				user.registeredeventids.push(responseData.event_id);
-				user.save()
-					.then(user => {
-						console.log(user);
-						res.redirect('http://tirutsava.com/dashboard');
-					})
-					.catch(err => {
-						console.log(err);
-						res.status(500);
-						res.redirect('http://tirutsava.com/dashboard');
-					})
-			})
-			.catch((err) => {
-				console.log(err);
-				res.status(500).send({ valid: false });
+		const name_id = 'l_' + responseData.user_id;
+		LocalUser.updateOne({ _id: responseData.user_id },
+			{
+				$push: { registeredeventids: responseData.event_id }
+			}, (err, user) => {
+				console.log("In Payment");
+				console.log(user);
 			});
+		Event.updateOne({
+			eventId: responseData.event_id
+		},
+			{
+				$push: { participants: name_id }
+			})
+		res.redirect('http://localhost/dashboard');
 	}
-	else {
-		GoogleUser.findOne({ _id: responseData.user_id })
-			.then((user) => {
-				user.registeredeventids.push(responseData.event_id);
-				console.log("Google:",user);
-				user.save()
-					.then(user => {
-						console.log(user);
-						res.redirect('http://tirutsava.com/dashboard');
-					})
-					.catch(err => {
-						console.log(err);
-						res.redirect('http://tirutsava.com/dashboard');
-					})
-			})
-			.catch((err) => {
-				console.log(err);
-				res.redirect('http://tirutsava.com/dashboard');
+	else if (responseData.type === 'google') {
+		const name_id = 'l_' + responseData.user_id;
+		GoogleUser.updateOne({ _id: responseData.user_id },
+			{
+				$push: { registeredeventids: responseData.event_id }
+			}, (err, user) => {
+				console.log("In Payment");
+				console.log(user);
 			});
+		Event.updateOne({
+			eventId: responseData.event_id
+		},
+			{
+				$push: { participants: name_id }
+			})
+		res.redirect('http://localhost/dashboard');
 	}
 });
 

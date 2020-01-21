@@ -30,10 +30,10 @@ const toolbar = props => (
             <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/aboutus">ABOUT US</Link>
+            <Link to="/proshows">PROSHOWS</Link>
           </li>
           <li>
-            <Link to="/testimonials">TESTIMONIALS</Link>
+            <Link to="/aboutus">ABOUT US</Link>
           </li>
           <li>
             <Link to="/events">EVENTS</Link>
@@ -45,8 +45,9 @@ const toolbar = props => (
             <Link to="/events/workshop">Workshop</Link>
           </li>
           <li>
-          {
-            localStorage.getItem('loggedin') ?
+          {/*console.log(localStorage.getItem('loggedin'))*/}
+            {
+              props.login ?
               <Link className="special-button" id="onReg" to="/dashboard">
                 Dashboard
             </Link>

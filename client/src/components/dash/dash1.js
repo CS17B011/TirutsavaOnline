@@ -12,12 +12,24 @@ export default class Dash1 extends Component {
     }
 
 
+  componentDidMount() {
+    axios.get('/auth/status')
+      .then(res => {
+        if (!res.data.loggedin)
+        {
+          localStorage.removeItem('loggedin');
+          window.location.href = 'http://localhost/login'; //'http://tirutsava.com/login'
+        }
+      })
+  }
+  
+  
   logout = (e) => {
     e.preventDefault();
     axios.get('/auth/logout')
       .then(res => {
-        localStorage.setItem('loggedin', false);
-        localStorage.removeItem('user');
+        localStorage.removeItem('loggedin');
+        window.location.href = 'http://localhost';//'http:tirutsava.com'
       });
   }
   

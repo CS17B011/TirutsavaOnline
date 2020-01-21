@@ -22,7 +22,7 @@ class CulturalDetails extends React.Component {
 	handlePayment = (e) => {
 		e.preventDefault();
 		if (this.state.event) {
-			if (this.state.event.typeOfEvent === 4) {
+			if (this.state.event.typeOfEvent === 5) {
 				window.location.href = 'https://www.instamojo.com/tbytes/techo-workshop-series-at-iit-tirupati-date-1/?ref=store';
 			}
 			else {
@@ -60,7 +60,7 @@ class CulturalDetails extends React.Component {
 		if (this.state.event.name)
 			img = `http://tirutsava.com/events_poster/${this.state.event.name}.jpg`;
 		else
-			window.location.href = 'http://tirutsava.com'
+			img = ''
 		return (
 			<div className="online-details">
 				<div className="event-details-poster">
@@ -78,9 +78,10 @@ class CulturalDetails extends React.Component {
 						</b>
 					</h1>
 					<p>{this.state.event.description}</p>
+					{console.log("Event : ",this.state.event)}
 					<div style={{ alignContent: "center", boxAlign: "center" }}>
 						<button
-							style={this.state.event.typeOfEvent === 4 ? { display: 'none' } : {}}
+							style={this.state.event.typeOfEvent === 5 ? { display: 'none' } : {}}
 							className="btn btn-default btn-lg btn-primary"
 							href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`}
 						>

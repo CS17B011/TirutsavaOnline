@@ -25,25 +25,25 @@ class Login extends Component {
 		};
 		Axios.post('/auth/local', userData)
 			.then((res) => {
-				console.log(res.data.user);
-				localStorage.setItem('loggedin', true);
-				localStorage.setItem('user', res.data.user);
+				//console.log(res.data.user);
+				if (res.data.valid)
+				{
+					localStorage.setItem('loggedin', true);
+					window.location.href = 'http://localhost/dashboard';	
+				}
+				else
+					window.location.href = 'http://localhost/login';	
+				 //'http://tirutsava.com'
+				//localStorage.setItem('user', res.data.user);
 			})
 			.catch(err => {
 				console.log("Error");
 			});
 	};
 
-	handleSubmitGoogle = e => {
-		e.preventDefault();
-	};
-
-	responseGoogle = response => {
-		console.log(response);
-	};
-
 	googleLogin = (e) => {
 		e.preventDefault();
+		localStorage.setItem('loggedin', true);
 		window.location.href = 'http://localhost/auth/google'
 	}
 

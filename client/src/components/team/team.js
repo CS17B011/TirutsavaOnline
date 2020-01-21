@@ -22,12 +22,7 @@ const TeamPage = () => {
         }}
       >
         <MDBContainer className="">
-          <h2
-            className="display-4 text-center"
-            style={{ fontFamily: "Comic Sans MS" }}
-          >
-            OUR AMAZING TEAM
-          </h2>
+          <h2 className="display-4 text-center">OUR AMAZING TEAM</h2>
         </MDBContainer>
       </MDBJumbotron>
       <MDBCard
@@ -45,6 +40,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Anna Williams</h5>
 
@@ -66,6 +62,7 @@ const TeamPage = () => {
                 tag="img"
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
+                id="img-fluid"
                 alt="Sample avatar"
               />
               <h5 className="font-weight-bold mt-4 mb-3">John Doe</h5>
@@ -86,6 +83,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Maria Smith</h5>
 
@@ -108,6 +106,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Tom Adams</h5>
 
@@ -131,6 +130,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Anna Williams</h5>
 
@@ -153,6 +153,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">John Doe</h5>
 
@@ -172,6 +173,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Maria Smith</h5>
 
@@ -194,6 +196,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Tom Adams</h5>
 
@@ -217,6 +220,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Anna Williams</h5>
 
@@ -239,6 +243,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">John Doe</h5>
 
@@ -258,6 +263,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Maria Smith</h5>
 
@@ -280,6 +286,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Tom Adams</h5>
 
@@ -303,6 +310,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Anna Williams</h5>
 
@@ -325,6 +333,7 @@ const TeamPage = () => {
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
                 className="rounded-circle z-depth-1 img-fluid"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">John Doe</h5>
 
@@ -342,8 +351,9 @@ const TeamPage = () => {
               <img
                 tag="img"
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
-                className="rounded-circle z-depth-1 img-fluid"
+                className="rounded-circle z-depth-1 img-fluid adjustments3"
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Maria Smith</h5>
 
@@ -364,8 +374,9 @@ const TeamPage = () => {
               <img
                 tag="img"
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg"
-                className="rounded-circle z-depth-1 img-fluid"
+                className="rounded-circle z-depth-1 img-fluid "
                 alt="Sample avatar"
+                id="img-fluid"
               />
               <h5 className="font-weight-bold mt-4 mb-3">Tom Adams</h5>
 

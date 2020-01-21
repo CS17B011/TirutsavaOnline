@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "676607a87ea57cf384cd6744cca5ff30",
+    "revision": "91227d3b301e7e8ab33ec7e03b22249b",
     "url": "/index.html"
   },
   {
-    "revision": "200c2dd7066020fef2b5",
+    "revision": "ab2ba6a14add999e8cb2",
     "url": "/static/css/2.1c5f909d.chunk.css"
   },
   {
-    "revision": "92e2ec14601350c4a098",
-    "url": "/static/css/main.a5a5860d.chunk.css"
+    "revision": "be3dde744b365008a74c",
+    "url": "/static/css/main.cf34ac4f.chunk.css"
   },
   {
-    "revision": "200c2dd7066020fef2b5",
-    "url": "/static/js/2.8af4f4c9.chunk.js"
+    "revision": "ab2ba6a14add999e8cb2",
+    "url": "/static/js/2.716050f6.chunk.js"
   },
   {
     "revision": "bfc691b15892b2017da8fe35c6b22f65",
-    "url": "/static/js/2.8af4f4c9.chunk.js.LICENSE"
+    "url": "/static/js/2.716050f6.chunk.js.LICENSE"
   },
   {
-    "revision": "92e2ec14601350c4a098",
-    "url": "/static/js/main.8e2a5bde.chunk.js"
+    "revision": "be3dde744b365008a74c",
+    "url": "/static/js/main.4e89c54b.chunk.js"
   },
   {
     "revision": "5536b1ffa5673e4eb964",
@@ -110,6 +110,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "dfe56a876d0282555d1e2458e278060f",
     "url": "/static/media/Roboto-Thin.dfe56a87.eot"
+  },
+  {
+    "revision": "ed240154cc2da484251ea648e24bc915",
+    "url": "/static/media/Untitled-1.ed240154.png"
   },
   {
     "revision": "a59bd9c447bd04107b49feb0c5dd3134",
@@ -240,6 +244,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/registration-page.4e771c2c.png"
   },
   {
+    "revision": "fa327fb864ad8d03f45f6cce36f7f4dd",
+    "url": "/static/media/revanth.fa327fb8.png"
+  },
+  {
     "revision": "c77f6120e80912b6c14e16a2828f0aea",
     "url": "/static/media/tech-back-vid.c77f6120.mp4"
   },
@@ -254,5 +262,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "86da787097f55b5f3c0750f4ed0943c0",
     "url": "/static/media/tirutsava_logo.86da7870.png"
+  },
+  {
+    "revision": "bec3546c26ad276d6685e088f6e440ad",
+    "url": "/static/media/zephyrtone.bec3546c.png"
   }
 ]);

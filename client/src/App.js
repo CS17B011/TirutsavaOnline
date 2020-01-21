@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import AOS from "aos";
@@ -9,7 +9,6 @@ import TechnicalEvents from "./components/technical-events/TechnicalEvents";
 import CulturalEvents from "./components/cultural-events/CulturalEvents";
 import OnlineEvents from "./components/online-events/OnlineEvents";
 import AboutUs from "./components/about-us/AboutUs";
-import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/event2/Events";
 
 import Dash from "./components/dash/dash1.js";
@@ -30,49 +29,35 @@ import CSOON from "./components/comming/coming";
 import Gallery from "./components/gallery/gallery";
 import Navbar from "./components/navbar/navbar";
 import Informal from "./components/informal/Informal";
+import Axios from "axios";
+
+import Proshows from "./components/proshows/proshows";
 
 AOS.init();
 
-const slides = [
-  {
-    city: "Thaikkudam",
-
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlvRIUAGlUr3j8XRAW0eJ47cpUEf4DmFgISTWo5uLmj_Q0CPn9"
-  },
-  {
-    city: "Masala Coffee",
-
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSgtRkv7aBCLM69U6R6nZtBjVbCz40XibhDKDuAFCpp2lCKRjXh"
-  },
-  {
-    city: "Progressive Brothers",
-
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQde1e2gBhUSAompRc-w5O6B86KAEUaWHpLHeeOlp6iFqxKHido"
-  },
-  {
-    city: "Lagori",
-
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSo6vbJFtXyxG3tEhEmELivySa8Gat5-jZOHHSdAGlnjpAQeDq"
-  },
-  {
-    city: "Axonn",
-
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQUsWCuuC5QXQwhGkVYtltUXKqN8OFtq9wxKfR5nWDbbebGFms"
-  }
-];
-
 const App = () => {
+
+  const [login, setLogin] = useState(localStorage.getItem('loggedin'));
+
+  useEffect(() => {
+    Axios.get('/auth/status')
+      .then((res) => {
+        if (res.data.loggedin)
+          localStorage.setItem('loggedin', true);
+        setLogin(localStorage.getItem('loggedin'));
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },[]);
+
   return (
     <Router>
       <div>
-        <Navbar />
+        <Navbar login={login}/>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/proshows" component={Proshows} />
           <Route exact path="/aboutus" component={AboutUs} />
           <Route exact path="/dashboard" component={Dash} />
           <Route exact path="/events" component={Events} />
@@ -99,16 +84,11 @@ const App = () => {
           <Route exact path="/events/workshop/:id" component={CulturalDetails} />
           <Route exact path="/events/workshop" component={Workshop} />
 
-          <Route
-            exact
-            path="/testimonials"
-            render={props => <Testimonials {...props} slides={slides} />}
-          />
-          <Route exact path="/notfound" component={NFOUND} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/query" component={Query} />
           <Route exact path="/events/prefest" component={Prefest} />
           <Route exact path="/sponsors" component={Sponsers} />
+          <Route path="/" component={NFOUND} />
         </Switch>
       </div>
     </Router>

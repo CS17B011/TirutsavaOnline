@@ -24,10 +24,10 @@ const SideDrawer = props => {
           <Link to="/">HOME</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/aboutus">ABOUT US</Link>
+          <Link to="/prowhows">PROSHOWS</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/testimonials">TESTIMONIALS</Link>
+          <Link to="/aboutus">ABOUT US</Link>
         </li>
         <li className="move" onClick={props.click}>
           <Link to="/events">EVENTS</Link>
@@ -39,8 +39,9 @@ const SideDrawer = props => {
           <Link to="/events/workshop">Workshop</Link>
         </li>
         <li className="move" onClick={props.click}>
+        {console.log("Value : ",localStorage.getItem('loggedin'))}
           {
-            localStorage.getItem('loggedin') ?
+            props.login ? 
               <Link className="special-button" id="onReg" to="/dashboard">
                 Dashboard
             </Link>
@@ -48,7 +49,6 @@ const SideDrawer = props => {
               <Link className="special-button" id="onReg" to="/login">
                 LOGIN
             </Link>
-
           }
         </li>
       </ul>
