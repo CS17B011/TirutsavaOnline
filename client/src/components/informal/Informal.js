@@ -6,7 +6,7 @@ import MediaQuery from "react-responsive";
 import Particles from "react-particles-js";
 import axios from "axios";
 
-class Workshop extends React.Component {
+class Informal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class Workshop extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("/api/events/type/5").then(res => {
+    axios.get("/api/events/type/6").then(res => {
       this.setState({ events: res.data });
       console.log("hey");
       // console.log(events);
@@ -171,7 +171,7 @@ class Workshop extends React.Component {
                     key={eve.eventId}
                     height="50"
                     price="50"
-                    type="4"
+                    type="3"
                     id={eve.eventId}
                     eventInfo={eve}
                   />
@@ -203,7 +203,7 @@ class Workshop extends React.Component {
                 return (
                   <CulturalCard
                     key={eve.eventId}
-                    type="4"
+                    type="3"
                     height="35"
                     price="50"
                     id={eve.eventId}
@@ -219,4 +219,4 @@ class Workshop extends React.Component {
   }
 }
 
-export default Workshop;
+export default Informal;

@@ -55,18 +55,20 @@ router.get('/dashboard', (req, res) => {
     var events = [];
     var user = req.session.passport.user;
     console.log("Printing User");
-  console.log(user);
+    console.log(user);
     person.name = user.name;
     person.email = user.email;
     person.college = user.college;
     person.phonenum = user.phonenum;
     person.state = user.state;
   
-    for(var i=0;i<user.registeredeventids.length;i++){
+    for (var i = 0; i < user.registeredeventids.length; i++){
+        console.log("In Loop");
           var newEvent = {};
-          Event.findById(user.registeredeventids[i]).then(event => {
+        Event.findOne({ eventId :user.registeredeventids[i] }).then(event => {
             newEvent.name = event.name;
-            if(event.typeOfEvent === 1){
+            console.log("Event Found...");
+            if (event.typeOfEvent === 1) {
               newEvent.type = "Technical";
             }else if (event.typeOfEvent === 2) {
               newEvent.type = "Cultural";
@@ -95,12 +97,8 @@ router.get('/dashboard', (req, res) => {
   
   //Call back Route
   router.get('/google/callback', passport.authenticate('google'), (req, res) => {
-      res.send(req.user);
+        res.redirect('http://tirutsava.com/');
   });
-//Call back Route
-router.get('/google/callback', passport.authenticate('google'), (req, res) => {
-    res.send(req.user);
-});
 
 
 module.exports = router;

@@ -42,6 +42,11 @@ class Login extends Component {
 		console.log(response);
 	};
 
+	googleLogin = (e) => {
+		e.preventDefault();
+		window.location.href = 'http://localhost/auth/google'
+	}
+
 	render() {
 		return (
 			<div className="login">
@@ -93,7 +98,8 @@ class Login extends Component {
 											className="btn-hover color-7"
 											style={{
 												transform: "scale(0.9)"
-											}}
+									}}
+									onClick = {this.googleLogin}
 										>
 											{/* {` OOGLE LOGIN`} */}
 											{/* <span>{` `}</span> */}

@@ -29,6 +29,7 @@ import NFOUND from "./components/notfound/notfound";
 import CSOON from "./components/comming/coming";
 import Gallery from "./components/gallery/gallery";
 import Navbar from "./components/navbar/navbar";
+import Informal from "./components/informal/Informal";
 
 AOS.init();
 
@@ -91,7 +92,12 @@ const App = () => {
             component={CulturalDetails}
           />
           <Route exact path="/events/prefest/:id" component={CulturalDetails} />
-          <Route exact path="/workshop" component={Workshop} />
+
+          <Route exact path="/events/informal/:id" component={CulturalDetails} />
+          <Route exact path="/events/informal" component={Informal} />
+
+          <Route exact path="/events/workshop/:id" component={CulturalDetails} />
+          <Route exact path="/events/workshop" component={Workshop} />
 
           <Route
             exact

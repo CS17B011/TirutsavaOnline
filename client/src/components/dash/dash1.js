@@ -6,48 +6,17 @@ import axios from 'axios';
 
 export default class Dash1 extends Component {
 
-  componentDidMount() {
-    axios.get('http://localhost:80/auth/dashboard', {withCredentials: true}).then(
-      data => {
-        console.log(data);
-        this.setState({
-          data : data.person,
-          events: data.events
-        });
-      }
-    )
-    .catch(err => console.log(err));
-  }
+  state = {
+      route: "profile",
+      render: <Profile />
+    }
 
-  constructor() {
-    super();
-    this.state = {
-      data: {},
-      events: []
-    };
-    this.state.route = "profile";
-    this.state.render = <Profile person={this.state.data} />;
-    
-    
-    /*
-    this.data = {
-      name: "Nandha",
-      phonenum: "9965852345",
-      state: "Andhara Pradesh",
-      email: "cs17b021@iittp.ac.in",
-      college: "IITTP"
-    };
-    this.events = [
-      {name: "1",type:"s1", eventId:"1"}
-    ];
-    */
 
-  }
   handleChange = route => {
     if (route === "profile") {
-      this.setState({ render: <Profile person={this.state.data}/> });
+      this.setState({ render: <Profile /> });
     } else if (route === "events") {
-      this.setState({ render: <Event events={this.state.events}/> });
+      this.setState({ render: <Event /> });
     } else {
       this.setState({
         render: (

@@ -1,10 +1,36 @@
 import React from "react";
+import axios from 'axios';
 
 export default class profile extends React.Component {
+  state = {
 
-  constructor(props) {
+  };
+
+  componentDidMount(){
+    axios.get('http://localhost:80/auth/dashboard', {withCredentials: true}).then(
+      data => {
+        console.log("Dashboard data");
+        console.log(data);
+        this.setState({
+          person: data.data.person
+        });
+      }
+    )
+    .catch(err => console.log(err));
+  }
+
+  constructor(props){
     super(props);
-    console.log(this.props);
+
+      if(!this.state.person){
+        this.state.person = {
+          name: "Loading...",
+          email: "Loading...",
+          college: "Loading...",
+          state: "Loading...",
+          phonenum: "Loading..."
+        }
+      }
   }
 
   render() {
@@ -19,7 +45,7 @@ export default class profile extends React.Component {
               name="name"
               id="name"
               placeholder="Your Name"
-              value={this.props.person.name}
+              value={this.state.person.name}
               disabled
             />
             <br />
@@ -30,7 +56,7 @@ export default class profile extends React.Component {
               name="email"
               id="email"
               placeholder="Your Name"
-              value={this.props.person.email}
+              value={this.state.person.email}
               disabled
             />{" "}
             <br />
@@ -41,7 +67,7 @@ export default class profile extends React.Component {
               college="college"
               id="college"
               placeholder="Your Name"
-              value={this.props.person.college}
+              value={this.state.person.college}
               disabled
             />{" "}
             <br />
@@ -52,7 +78,7 @@ export default class profile extends React.Component {
               name="phone"
               id="phone"
               placeholder="Your Contact"
-              value={this.props.person.phonenum}
+              value={this.state.person.phonenum}
               disabled
             />{" "}
             <br />
@@ -63,7 +89,7 @@ export default class profile extends React.Component {
               name="state"
               id="state"
               placeholder="Your State"
-              value={this.props.person.state}
+              value={this.state.person.state}
               disabled
             />
           </div>

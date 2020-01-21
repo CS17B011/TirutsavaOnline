@@ -1,12 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./events.css";
+import axios from 'axios';
 
 export default class event extends React.Component {
-
-  constructor(props){
-    super(props);
+  state = {};
+  componentDidMount(){
+    axios.get('http://localhost:80/auth/dashboard', {withCredentials: true}).then(
+      data => {
+        console.log("Dashboard data");
+        console.log(data);
+        this.setState({
+          events: data.data.events
+        });
+      }
+    )
+    .catch(err => console.log(err));
   }
+    constructor(props){
+      super(props);
+      console.log("Evenst");
+      console.log(this.state.events);
+      if(!this.state.events){
+        this.state.events = []
+      }
+    }
   render(){
   return (
     <main role="main" className="my-0">
@@ -14,8 +32,8 @@ export default class event extends React.Component {
         <h2>Events</h2>
         <ul>
         {
-          (this.props.events.length!==0) ?
-              this.props.events.map((event,index) => {
+          (this.state.events.length!==0) ?
+              this.state.events.map((event,index) => {
                 return(
                   <React.Fragment key={index}>
                   <li>

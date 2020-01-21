@@ -25,6 +25,25 @@ router.get('/:id', (req, res) => {
 		});
 });
 
+router.post('/create', (req, res) => {
+	let nnm = 0;
+	Event.estimatedDocumentCount((err, res) => {
+		if (!err)
+			nnm = res + 1;
+	})
+		.then(() => {
+			const newEvent = Event({
+				name: req.body.name,
+				eventId: nnm,
+				description: req.body.description,
+				typeOfEvent: req.body.typeOfEvent,
+				entryfee: req.body.entryfee
+			});
+			newEvent.save()
+				.then(event => res.json(event));
+		});
+});
+
 //api/events/register
 router.post('/register', loggedin, (req, res) => {
 	Event.findOne({ eventId: req.body.eventId })
@@ -42,7 +61,7 @@ router.post('/register', loggedin, (req, res) => {
 				data.purpose = event.name + ' Registration';
 				data.amount = event.entryfee;
 				data.buyer_name = user.name;
-				data.redirect_url = `http://localhost/api/events/register/callback?user_id=${user._id}&type=${type}`;
+				data.redirect_url = `http://localhost/api/events/register/callback?user_id=${user._id}&type=${type}&event_id=${event.eventId}`;
 				data.email = user.email;
 				data.send_mail = true;
 				data.allow_repeated_payments = false;
@@ -70,15 +89,46 @@ router.post('/register', loggedin, (req, res) => {
 router.get('/register/callback', (req, res) => {
 	let url_parts = url.parse(req.url, true);
 	var responseData = url_parts.query;
-	if (responseData.type === 'local')
-	{
+	console.log(responseData);
+	console.log("Callback");
+	if (responseData.type === 'local') {
 		LocalUser.findOne({ _id: responseData.user_id })
 			.then((user) => {
-				
+				user.registeredeventids.push(responseData.event_id);
+				user.save()
+					.then(user => {
+						console.log(user);
+						res.redirect('http://tirutsava.com/dashboard');
+					})
+					.catch(err => {
+						console.log(err);
+						res.status(500);
+						res.redirect('http://tirutsava.com/dashboard');
+					})
 			})
 			.catch((err) => {
 				console.log(err);
-				res.status(500).send({ valid:false});
+				res.status(500).send({ valid: false });
+			});
+	}
+	else {
+		GoogleUser.findOne({ _id: responseData.user_id })
+			.then((user) => {
+				user.registeredeventids.push(responseData.event_id);
+				console.log("Google:",user);
+				user.save()
+					.then(user => {
+						console.log(user);
+						res.redirect('http://tirutsava.com/dashboard');
+					})
+					.catch(err => {
+						console.log(err);
+						res.redirect('http://tirutsava.com/dashboard');
+					})
+			})
+			.catch((err) => {
+				console.log(err);
+				res.redirect('http://tirutsava.com/dashboard');
 			});
 	}
 });

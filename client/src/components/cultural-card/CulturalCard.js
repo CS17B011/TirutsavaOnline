@@ -6,9 +6,15 @@ const CulturalCard = ({ height, price, eventInfo, history, match, type }) => {
   const img = `http://localhost/events_poster/${eventInfo.name}.jpg`;
   return (
     <Link
-      to={`/events/${type === "2" ? "prefest" : "cultural"}/${
-        eventInfo.eventId
-      }`}
+      to={`/events/${
+        type === "2"
+          ? "prefest"
+          : type === "3"
+          ? "informal"
+          : type === "4"
+          ? "workshop"
+          : "cultural"
+      }/${eventInfo.eventId}`}
     >
       <div id="entire-card">
         <div
