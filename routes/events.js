@@ -63,7 +63,7 @@ router.post('/registerfree', loggedin, async(req, res) => {
 	res.send({ valid: true });
 });
 
-
+/*
 router.post('/create', (req, res) => {
 	let nnm = 0;
 	Event.estimatedDocumentCount((err, res) => {
@@ -82,6 +82,7 @@ router.post('/create', (req, res) => {
 				.then(event => res.json(event));
 		});
 });
+*/
 
 //api/events/register
 router.post('/register', loggedin, (req, res) => {
@@ -99,7 +100,7 @@ router.post('/register', loggedin, (req, res) => {
 				data.purpose = event.name + ' Registration';
 				data.amount = event.entryfee;
 				data.buyer_name = user.name;
-				data.redirect_url = `http://localhost/api/events/register/callback?user_id=${user._id}&type=${type}&event_id=${event.eventId}`;
+				data.redirect_url = `http://tirutsava.com/api/events/register/callback?user_id=${user._id}&type=${type}&event_id=${event.eventId}`;
 				data.email = user.email;
 				data.send_mail = true;
 				data.allow_repeated_payments = false;
@@ -144,7 +145,7 @@ router.get('/register/callback', async(req, res) => {
 			{
 				$push: { participants: name_id }
 			})
-		res.redirect('http://localhost/dashboard');
+		res.redirect('http://tirutsava.com/dashboard');
 	}
 	else if (responseData.type === 'google') {
 		const name_id = 'g_' + responseData.user_id;
@@ -162,7 +163,7 @@ router.get('/register/callback', async(req, res) => {
 				$push: { participants: name_id }
 			})
 	}
-	res.redirect('http://localhost/dashboard');
+	res.redirect('http://tirutsava.com/dashboard');
 });
 
 module.exports = router;

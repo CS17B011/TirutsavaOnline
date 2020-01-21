@@ -11,13 +11,14 @@ import OnlineEvents from "./components/online-events/OnlineEvents";
 import AboutUs from "./components/about-us/AboutUs";
 import Events from "./components/event2/Events";
 
+import Sponsers from "./components/sponsers/sponsers";
+
 import Dash from "./components/dash/dash1.js";
 
 import Home from "./components/home/home";
 
 import Faq from "./components/faqs/main";
 import Query from "./components/faqs/query/query";
-import Sponsers from "./components/sponsers/sponsers";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Googleregister from "./components/googleregister/Googleregister";
@@ -30,6 +31,8 @@ import Gallery from "./components/gallery/gallery";
 import Navbar from "./components/navbar/navbar";
 import Informal from "./components/informal/Informal";
 import Axios from "axios";
+
+import Sponsors from "./components/sponsers/sponsers.js"; 
 
 import Proshows from "./components/proshows/proshows";
 

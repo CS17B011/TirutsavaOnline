@@ -110,13 +110,14 @@ class CulturalDetails extends React.Component {
 					{//console.log("Event : ", this.state.event)
 					}
 					<div style={{ alignContent: "center", boxAlign: "center" }}>
+						<a href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
 						<button
 							style={this.state.event.typeOfEvent === 5 ? { display: 'none' } : {}}
 							className="btn btn-default btn-lg btn-primary"
-							href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`}
 						>
 							RuleBook
             			</button>
+						</a>
 						<button className="btn btn-default btn-lg btn-primary" onClick={this.handlePayment}>
 							Register+
             			</button>

@@ -89,12 +89,12 @@ class EventDetails extends React.Component {
 					</h1>
 					<p>{this.state.event.description}</p>
 					<div style={{ alignContent: "center", boxAlign: "center" }}>
+					<a href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
 						<button
-							className="btn btn-default btn-lg btn-primary"
-							href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`}
-						>
+							className="btn btn-default btn-lg btn-primary">
 							RuleBook
             </button>
+					</a>
 						<button className="btn btn-default btn-lg btn-primary" onClick={this.handlePayment}>
 							Register+
             </button>
