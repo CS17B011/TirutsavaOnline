@@ -351,7 +351,7 @@ const TeamPage = () => {
               <img
                 tag="img"
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
-                className="rounded-circle z-depth-1 img-fluid"
+                className="rounded-circle z-depth-1 img-fluid adjustments3"
                 alt="Sample avatar"
                 id="img-fluid"
               />
