@@ -18,7 +18,7 @@ class CulturalEvents extends React.Component {
 
   componentDidMount() {
     axios.get("/api/events/type/2").then(res => {
-      console.log(res.data);
+      //console.log(res.data);
       this.setState({ events: res.data });
       // console.log(events);
     });

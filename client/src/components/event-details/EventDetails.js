@@ -22,9 +22,36 @@ class EventDetails extends React.Component {
 	handlePayment = (e) => {
 		e.preventDefault();
 		if (this.state.event) {
-			axios.post('/api/events/register', this.state.event)
+			if (this.state.event.entryfee <= 9)
+			{
+				const data = {
+					event_id : this.state.event.eventId
+				}
+				axios.post('/api/events/registerfree',data)
+					.then(res => {
+						if (!res.data.valid)
+						{
+							Swal.fire({
+								icon: 'error',
+								title: 'Registration Failed!',
+								text: 'Log in first!!'
+							});
+						}
+						else
+						{ 
+							Swal.fire({
+								icon: 'success',
+								title: 'Registration Completed!',
+								text: 'You are registered for this event!!'
+							});
+						}
+					})
+			}
+			else
+			{
+				axios.post('/api/events/register', this.state.event)
 				.then((res) => {
-					console.log(res.data.success);
+					//console.log(res.data.success);
 					if (res.data.success)
 					{
 						window.location.href = res.data.payment_request.longurl;
@@ -36,14 +63,15 @@ class EventDetails extends React.Component {
 							text: 'If you are not logged in sign in first!'
 						})
 					}
-				})
+				})	
+			}
 		}
 	}
 
 	render() {
 		let img;
 		if (this.state.event.name)
-			img = `http://localhost/events_poster/${this.state.event.name}.jpg`;
+			img = `http://tirutsava.com/events_poster/${this.state.event.name}.jpg`;
 		else img = "";
 		return (
 			<div className="event-details">
@@ -59,7 +87,7 @@ class EventDetails extends React.Component {
 					</h1>
 					<p>{this.state.event.description}</p>
 					<div style={{ alignContent: "center", boxAlign: "center" }}>
-						<a href={`http://localhost/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
+						<a href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
 							<button className="btn btn-default btn-lg btn-primary">
 								RuleBook
               </button>

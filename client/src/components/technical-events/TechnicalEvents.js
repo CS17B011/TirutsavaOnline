@@ -20,7 +20,7 @@ class TechnicalEvents extends React.Component {
 
   componentDidMount() {
     axios.get("/api/events/type/1").then(res => {
-      console.log(res.data);
+      //console.log(res.data);
       this.setState({ events: res.data });
       // console.log(events);
     });
@@ -144,7 +144,7 @@ class TechnicalEvents extends React.Component {
         </div>
       );
     else {
-      console.log("nope");
+      //console.log("nope");
       return null;
     }
   }

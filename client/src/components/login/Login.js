@@ -29,22 +29,22 @@ class Login extends Component {
 				if (res.data.valid)
 				{
 					localStorage.setItem('loggedin', true);
-					window.location.href = 'http://localhost/dashboard';	
+					window.location.href = 'http://tirutsava.com/dashboard';	
 				}
 				else
-					window.location.href = 'http://localhost/login';	
+					window.location.href = 'http://tirutsava.com/login';	
 				 //'http://tirutsava.com'
 				//localStorage.setItem('user', res.data.user);
 			})
 			.catch(err => {
-				console.log("Error");
+				//console.log("Error");
 			});
 	};
 
 	googleLogin = (e) => {
 		e.preventDefault();
 		localStorage.setItem('loggedin', true);
-		window.location.href = 'http://localhost/auth/google'
+		window.location.href = 'http://tirutsava.com/auth/google';
 	}
 
 	render() {

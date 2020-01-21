@@ -66,7 +66,7 @@ const App = () => {
     },
     {
       question:"What is the cost of accommodation facility?",
-      answer: "We charge on a night basis and we charge INR 250 for Non AC room and INR 300 for AC room.",
+      answer: "We charge on a night basis and we charge INR 200 for Non AC room and INR 250 for AC room.",
       open: false
     },
     {

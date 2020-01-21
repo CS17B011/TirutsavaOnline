@@ -6,10 +6,10 @@ import axios from 'axios';
 export default class event extends React.Component {
   state = {};
   componentDidMount(){
-    axios.get('http://localhost:80/auth/dashboard', {withCredentials: true}).then(
+    axios.get('http://tirutsava.com/auth/dashboard', {withCredentials: true}).then(
       data => {
-        console.log("Dashboard data");
-        console.log(data);
+        //console.log("Dashboard data");
+        //console.log(data);
         this.setState({
           events: data.data.events
         });
@@ -19,8 +19,8 @@ export default class event extends React.Component {
   }
     constructor(props){
       super(props);
-      console.log("Evenst");
-      console.log(this.state.events);
+      //console.log("Evenst");
+      //onsole.log(this.state.events);
       if(!this.state.events){
         this.state.events = []
       }
@@ -37,7 +37,7 @@ export default class event extends React.Component {
                 return(
                   <React.Fragment key={index}>
                   <li>
-                    <Link className="text-dark li " to={"/api/events/"+event.eventId}>
+                    <Link className="text-dark li " to={"/events/"+event.type.toLowerCase()+"/"+event.eventId}>
                       <span>{event.name}</span>{" "}
                       <span style={{ color: "red" }} className="blink_me">
                         {" "}

@@ -24,3 +24,24 @@
     transform: scaleX(1.7) scaleY(1.7) translateX(-12vw);
   }
 }
+
+.proshows-entry-fee {
+  font-weight: bold;
+  justify-content: center;
+}
+
+.margin-adjust {
+  margin-top: 5px;
+}
+
+.proshows-back {
+  /* background-color: #7e67b6; */
+}
+
+.adjust-margin {
+  margin-top: 0 !important;
+}
+
+.adjust-margin-bottom {
+  margin-bottom: 0 !important;
+}

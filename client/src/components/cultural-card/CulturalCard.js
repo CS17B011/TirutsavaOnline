@@ -4,7 +4,7 @@ import Frame from "../frames/cult-frame.png";
 
 const CulturalCard = ({ height, price, eventInfo, history, match, type }) => {
   const imgpath = eventInfo.name.split(' ').join('_');
-  const img = `http://localhost/events_poster/${imgpath}.jpg`;
+  const img = `http://tirutsava.com/events_poster/${imgpath}.jpg`;
   return (
     <Link
       to={`/events/${

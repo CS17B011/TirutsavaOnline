@@ -24,7 +24,7 @@ class Workshop extends React.Component {
 
   render() {
     const { events } = this.state;
-    console.log(events.length);
+    //console.log(events.length);
     if (events.length > 0)
       return (
         <div className="cultural-events">

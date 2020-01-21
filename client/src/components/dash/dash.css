@@ -3,7 +3,7 @@
   400,
   700,
   400italic
-);
+);  
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css);
 
@@ -215,14 +215,14 @@ main li:before {
 }
 
 /* forms */
-form input,
+/* form input,
 form textarea,
 form select {
   width: 100%;
   display: block;
   border: solid 1px #dde;
   padding: 0.5em;
-}
+} */
 
 form input:after,
 form textarea:after,

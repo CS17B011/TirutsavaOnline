@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Frame from "../frames/online-frame.png";
 
 const OnlineEventCard = ({ height, price, eventInfo, history, match }) => {
-  const img = `http://localhost/events_poster/${eventInfo.name}.JPG`;
+  const img = `http://tirutsava.com/events_poster/${eventInfo.name}.jpg`;
   return (
     <Link to={`/events/online/${eventInfo.eventId}`}>
       <div id="entire-card">
@@ -32,7 +32,8 @@ const OnlineEventCard = ({ height, price, eventInfo, history, match }) => {
           </div>
 
           <div
-            onClick={() => console.log("we will redirect now")}
+            //onClick={() => console.log("we will redirect now")}
+          
             id="event-btn"
           >
             button...

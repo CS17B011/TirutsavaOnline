@@ -17,14 +17,14 @@ class Informal extends React.Component {
   componentDidMount() {
     axios.get("/api/events/type/6").then(res => {
       this.setState({ events: res.data });
-      console.log("hey");
+      //console.log("hey");
       // console.log(events);
     });
   }
 
   render() {
     const { events } = this.state;
-    console.log(events.length);
+    //console.log(events.length);
     if (events.length > 0)
       return (
         <div className="cultural-events">

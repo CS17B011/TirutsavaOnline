@@ -54,22 +54,21 @@ const AboutUs = () => {
         <div>
           FOOTFALLS
           <div>
-            <CountUp className="counter" end={100} duration={5} />
-            <span className="counter">K</span>
+            <CountUp className="counter" end={6000} duration={5} />
           </div>
         </div>
 
         <div>
           EVENTS
           <div>
-            <CountUp className="counter" end={125} duration={5} />
+            <CountUp className="counter" end={30} duration={5} />
           </div>
         </div>
 
         <div>
           PRIZES
           <div>
-            <CountUp className="counter" end={500} duration={5} />
+            <CountUp className="counter" end={200} duration={5} />
             <span className="counter">K</span>
           </div>
         </div>

@@ -47,7 +47,7 @@ const App = () => {
         setLogin(localStorage.getItem('loggedin'));
       })
       .catch(err => {
-        console.log(err);
+        //console.log(err);
       });
   },[]);
 

@@ -36,7 +36,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/amara_raja.png"
+                        src="http://tirutsava.com/sp_logo/amara_raja.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "250px" }}
@@ -78,7 +78,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/sbi.png"
+                        src="http://tirutsava.com/sp_logo/sbi.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "250px" }}
@@ -121,7 +121,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/canara_bank.png"
+                        src="http://tirutsava.com/sp_logo/canara_bank.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "250px" }}
@@ -160,7 +160,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/axis_bank.png"
+                        src="http://tirutsava.com/sp_logo/axis_bank.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "250px" }}
@@ -208,7 +208,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/venusgeo.png"
+                        src="http://tirutsava.com/sp_logo/venusgeo.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "200px" }}
@@ -243,7 +243,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/zwickroell.png"
+                        src="http://tirutsava.com/sp_logo/zwickroell.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "200px" }}
@@ -278,7 +278,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/hoverrobotix.png"
+                        src="http://tirutsava.com/sp_logo/hoverrobotix.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "200px" }}
@@ -312,7 +312,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/journey_wheels.png"
+                        src="http://tirutsava.com/sp_logo/journey_wheels.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "200px" }}
@@ -353,7 +353,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/firefox.png"
+                        src="http://tirutsava.com/sp_logo/firefox.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -391,7 +391,7 @@ export default function List() {
                   >
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/ace_engineering.png"
+                        src="http://tirutsava.com/sp_logo/ace_engineering.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -428,7 +428,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/career_launcher.png"
+                        src="http://tirutsava.com/sp_logo/career_launcher.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -465,7 +465,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/made_easy.png"
+                        src="http://tirutsava.com/sp_logo/made_easy.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -501,7 +501,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/soda_junction.png"
+                        src="http://tirutsava.com/sp_logo/soda_junction.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -535,7 +535,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/creamstone.png"
+                        src="http://tirutsava.com/sp_logo/creamstone.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -569,7 +569,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/dare2compete.png"
+                        src="http://tirutsava.com/sp_logo/dare2compete.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -603,7 +603,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/airtel.png"
+                        src="http://tirutsava.com/sp_logo/airtel.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -639,7 +639,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/indian_institute_of_photography.png"
+                        src="http://tirutsava.com/sp_logo/indian_institute_of_photography.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "114px" }}
@@ -675,7 +675,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/inkpot.png"
+                        src="http://tirutsava.com/sp_logo/inkpot.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -709,7 +709,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/its_my_tirupati.png"
+                        src="http://tirutsava.com/sp_logo/its_my_tirupati.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -745,7 +745,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/ktm.png"
+                        src="http://tirutsava.com/sp_logo/ktm.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -779,7 +779,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/lti.png"
+                        src="http://tirutsava.com/sp_logo/lti.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -815,7 +815,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/WAF.png"
+                        src="http://tirutsava.com/sp_logo/WAF.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -849,7 +849,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/techobytes.png"
+                        src="http://tirutsava.com/sp_logo/techobytes.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -883,7 +883,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/bank_of_baroda.png"
+                        src="http://tirutsava.com/sp_logo/bank_of_baroda.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -917,7 +917,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/exafluence.png"
+                        src="http://tirutsava.com/sp_logo/exafluence.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -951,7 +951,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/indian_scienctific.png"
+                        src="http://tirutsava.com/sp_logo/indian_scienctific.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
@@ -985,7 +985,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://localhost:4000/sp_logo/accountants_factory.png"
+                        src="http://tirutsava.com/sp_logo/accountants_factory.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "113px" }}

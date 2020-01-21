@@ -42,7 +42,7 @@ class Register extends Component {
 				icon: 'error',
 				title: 'Password Not Mached!',
 				text: 'Password and Confirm Password should be same'
-			});	
+			});
 		}
 		else {
 			const userData = {
@@ -55,41 +55,36 @@ class Register extends Component {
 				state: this.state.statename,
 				phoneNo: this.state.phoneNo
 			};
-			Axios.post('/auth/registration',userData)
+			Axios.post('/auth/registration', userData)
 				.then((res) => {
-					if (res.data.valid)
-					{
+					if (res.data.valid) {
 						Swal.fire({
 							icon: 'success',
 							title: 'Success',
 							text: 'Registration Successfull!!'
 						})
 							.then(() => {
-								this.setState(initialState, () => {
-									return <Redirect to='/' />
-								});
-						});	
+								window.location.href = 'http://tirutsava.com/login';
+							});
 					}
-					else if(res.data.exist)
-					{
+					else if (res.data.exist) {
 						Swal.fire({
 							icon: 'error',
 							title: 'Error',
 							text: 'User with same emailid already exists!!'
 						})
 							.then(() => {
-								return <Redirect to='/login'/>
-							});	
+								return <Redirect to='/login' />
+							});
 					}
-					else
-					{
+					else {
 						Swal.fire({
 							icon: 'error',
 							title: 'Error',
 							text: 'Error in Registration !! Try again later !!'
 						})
 							.then(() => {
-								return <Redirect to='/'/>
+								return <Redirect to='/' />
 							});
 					}
 				})
@@ -100,7 +95,7 @@ class Register extends Component {
 						text: 'Error in Registration !! Try again later !!'
 					})
 						.then(() => {
-							return <Redirect to='/'/>
+							return <Redirect to='/' />
 						});
 				})
 		}
@@ -112,7 +107,7 @@ class Register extends Component {
 	};
 
 	responseGoogle = response => {
-		console.log(response);
+		//console.log(response);
 	};
 
 	componentDidMount() {/*
@@ -244,7 +239,7 @@ class Register extends Component {
 								className={this.state.collegeinlist ? "dontshow" : "showit"}
 							></input>
 
-<div className="label ">
+							<div className="label ">
 								<span className="big">S</span>
 								<span className="normal">TATE*</span>
 							</div>
@@ -291,9 +286,10 @@ class Register extends Component {
 
 							<div className="label ">
 								<span className="big">P</span>
-								<span className="normal">HONE NO</span>
+								<span className="normal">HONE NO*</span>
 							</div>
 							<input
+								required
 								name="phoneNo"
 								value={this.state.phoneNo}
 								onChange={this.handleChange}

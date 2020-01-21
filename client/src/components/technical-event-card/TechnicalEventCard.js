@@ -5,7 +5,7 @@ import "./TechnicalEventCard.css";
 
 const TechnicalEventCard = ({ height, price, eventInfo ,history, match }) => {
 
-	const img = `http://localhost/events_poster/${eventInfo.name}.jpg`;
+	const img = `http://tirutsava.com/events_poster/${eventInfo.name}.jpg`;
 
 	return (
 		<Link to={`/events/technical/${eventInfo.eventId}`}>
@@ -35,7 +35,7 @@ const TechnicalEventCard = ({ height, price, eventInfo ,history, match }) => {
 					</div>
 
 					<div
-						onClick={() => console.log("we will redirect now")}
+						//onClick={() => console.log("we will redirect now")}
 						id="event-btn"
 					>
 						button...

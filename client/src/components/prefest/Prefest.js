@@ -16,16 +16,16 @@ class Prefest extends React.Component {
 
   componentDidMount() {
     axios.get("/api/events/type/4").then(res => {
-      console.log(res.data, "prefets");
+      //console.log(res.data, "prefets");
       this.setState({ events: res.data });
-      console.log("hey");
+      //console.log("hey");
       // console.log(events);
     });
   }
 
   render() {
     const { events } = this.state;
-    console.log(events.length);
+    //console.log(events.length);
     if (events.length > 0)
       return (
         <div className="cultural-events">

@@ -18,7 +18,7 @@ export default class Dash1 extends Component {
         if (!res.data.loggedin)
         {
           localStorage.removeItem('loggedin');
-          window.location.href = 'http://localhost/login'; //'http://tirutsava.com/login'
+          window.location.href = 'http://tirutsava.com/login'; //'http://tirutsava.com/login'
         }
       })
   }
@@ -29,7 +29,7 @@ export default class Dash1 extends Component {
     axios.get('/auth/logout')
       .then(res => {
         localStorage.removeItem('loggedin');
-        window.location.href = 'http://localhost';//'http:tirutsava.com'
+        window.location.href = 'http://tirutsava.com';//'http:tirutsava.com'
       });
   }
   

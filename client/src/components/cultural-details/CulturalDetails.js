@@ -22,26 +22,51 @@ class CulturalDetails extends React.Component {
 	handlePayment = (e) => {
 		e.preventDefault();
 		if (this.state.event) {
-			if (this.state.event.typeOfEvent === 5) {
-				window.location.href = 'https://www.instamojo.com/tbytes/techo-workshop-series-at-iit-tirupati-date-1/?ref=store';
+			if (this.state.event.entryfee <= 9)
+			{
+				const data = {
+					event_id : this.state.event.eventId
+				}
+				axios.post('/api/events/registerfree',data)
+					.then(res => {
+						if (!res.data.valid)
+						{
+							Swal.fire({
+								icon: 'error',
+								title: 'Registration Failed!',
+								text: 'Log in first!!'
+							});
+						}
+						else
+						{ 
+							Swal.fire({
+								icon: 'success',
+								title: 'Registration Completed!',
+								text: 'You are registered for this event!!'
+							});
+						}
+					})
+			}
+			else if (this.state.event.typeOfEvent === 5) {
+				axios.get('/auth/status')
+					.then((res) => {
+						if (res.data.loggedin)
+							window.location.href = 'https://www.instamojo.com/tbytes/techo-workshop-series-at-iit-tirupati-date-1/?ref=store';
+						else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Registraion Failed!',
+								text: 'If you are not logged in then log in first!!'
+							})
+						}
+					});
 			}
 			else {
 				axios.post('/api/events/register', this.state.event)
 					.then((res) => {
-						if (res.data.valid) {
-							if (res.data.registered) {
-								Swal.fire({
-									icon: 'success',
-									title: 'Registration Successful!!'
-								});
-							}
-							else {
-								Swal.fire({
-									icon: 'warning',
-									title: 'Payment Not Completed!',
-									text: 'Not Registered for event!'
-								});
-							}
+						//console.log(res.data.success);
+						if (res.data.success) {
+							window.location.href = res.data.payment_request.longurl;
 						}
 						else {
 							Swal.fire({
@@ -78,7 +103,8 @@ class CulturalDetails extends React.Component {
 						</b>
 					</h1>
 					<p>{this.state.event.description}</p>
-					{console.log("Event : ",this.state.event)}
+					{//console.log("Event : ", this.state.event)
+					}
 					<div style={{ alignContent: "center", boxAlign: "center" }}>
 						<button
 							style={this.state.event.typeOfEvent === 5 ? { display: 'none' } : {}}

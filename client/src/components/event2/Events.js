@@ -26,7 +26,7 @@ class Events extends React.Component {
         currentTime = 0,
         increment = 20;
 
-      console.log(start);
+      //console.log(start);
 
       var animateScroll = function() {
         currentTime += increment;

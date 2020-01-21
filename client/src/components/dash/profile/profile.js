@@ -7,10 +7,10 @@ export default class profile extends React.Component {
   };
 
   componentDidMount(){
-    axios.get('http://localhost:80/auth/dashboard', {withCredentials: true}).then(
+    axios.get('http://tirutsava.com/auth/dashboard', {withCredentials: true}).then(
       data => {
-        console.log("Dashboard data");
-        console.log(data);
+        //console.log("Dashboard data");
+        //console.log(data);
         this.setState({
           person: data.data.person
         });

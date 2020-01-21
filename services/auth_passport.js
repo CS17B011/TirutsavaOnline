@@ -21,7 +21,7 @@ passport.use(new GoogleStrategy({
     callbackURL: "/auth/google/callback"
 },
     (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
+        //console.log(profile);
         GoogleUser.findOne({ googleid: profile.id })
             .then((user) => {
                 if (user)
@@ -49,18 +49,18 @@ passport.use(new GoogleStrategy({
 
 passport.use(new LocalStrategy(
     (username,password,done) => {
-        console.log("Local Auth Route");
-        console.log(username, password);
+        //console//console.log("Local Auth Route");
+        //console.log(username, password);
         LocalUser.findOne({ email: username })
             .then((user) => {
                 if(user)
                 {
-                    console.log("User found!!");
+                    //console.log("User found!!");
                     bcrypt.compare(password, user.password, (err, res) => {
                         if (res == true)
                         {
                             done(null, user);
-                            console.log("Auth");
+                            //console.log("Auth");
                         }
                         else
                             done(null, false);

@@ -24,7 +24,7 @@ class Googleregister extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log("Submission success");
+    //console.log("Submission success");
 
     const userData = {
       gender: this.state.gender,
@@ -43,11 +43,11 @@ class Googleregister extends Component {
     //   statename: "",
     //   phoneNo: ""
     // });
-    console.log(userData);
+    //console.log(userData);
   };
 
   responseGoogle = response => {
-    console.log(response);
+    //console.log(response);
   };
 
   render() {
