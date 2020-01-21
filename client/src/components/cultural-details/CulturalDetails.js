@@ -21,37 +21,37 @@ class CulturalDetails extends React.Component {
 
 	handlePayment = (e) => {
 		e.preventDefault();
-		if (this.state.event)
-		{
-			axios.post('/api/events/register', this.state.event)
-				.then((res) => {
-					if (res.data.valid)
-					{
-						if (res.data.registered)
-						{
-							Swal.fire({
-								icon: 'success',
-								title: 'Registration Successful!!'
-							});		
+		if (this.state.event) {
+			if (this.state.event.typeOfEvent === 4) {
+				window.location.href = 'https://www.instamojo.com/tbytes/techo-workshop-series-at-iit-tirupati-date-1/?ref=store';
+			}
+			else {
+				axios.post('/api/events/register', this.state.event)
+					.then((res) => {
+						if (res.data.valid) {
+							if (res.data.registered) {
+								Swal.fire({
+									icon: 'success',
+									title: 'Registration Successful!!'
+								});
+							}
+							else {
+								Swal.fire({
+									icon: 'warning',
+									title: 'Payment Not Completed!',
+									text: 'Not Registered for event!'
+								});
+							}
 						}
-						else
-						{
+						else {
 							Swal.fire({
-								icon: 'warning',
-								title: 'Payment Not Completed!',
-								text: 'Not Registered for event!'
-							});	
+								icon: 'error',
+								title: 'Registration Failed!!',
+								text: 'If you are not logged in sign in first!'
+							})
 						}
-					}
-					else
-					{
-						Swal.fire({
-							icon: 'error',
-							title: 'Registration Failed!!',
-							text: 'If you are not logged in sign in first!'
-						})
-					}
-				})
+					})
+			}
 		}
 	}
 
@@ -59,7 +59,8 @@ class CulturalDetails extends React.Component {
 		let img;
 		if (this.state.event.name)
 			img = `http://tirutsava.com/events_poster/${this.state.event.name}.jpg`;
-		else img = "";
+		else
+			window.location.href = 'http://tirutsava.com'
 		return (
 			<div className="online-details">
 				<div className="event-details-poster">
@@ -79,14 +80,15 @@ class CulturalDetails extends React.Component {
 					<p>{this.state.event.description}</p>
 					<div style={{ alignContent: "center", boxAlign: "center" }}>
 						<button
+							style={this.state.event.typeOfEvent === 4 ? { display: 'none' } : {}}
 							className="btn btn-default btn-lg btn-primary"
 							href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`}
 						>
 							RuleBook
-            </button>
+            			</button>
 						<button className="btn btn-default btn-lg btn-primary" onClick={this.handlePayment}>
 							Register+
-            </button>
+            			</button>
 					</div>
 				</div>
 			</div>

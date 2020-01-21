@@ -42,10 +42,13 @@ const toolbar = props => (
             <Link to="/faq">FAQs</Link>
           </li>
           <li>
+            <Link to="/events/workshop">Workshop</Link>
+          </li>
+          <li>
           {
             localStorage.getItem('loggedin') ?
-              <Link className="special-button" id="onReg" to="/logout">
-                LOGOUT
+              <Link className="special-button" id="onReg" to="/dashboard">
+                Dashboard
             </Link>
               :
               <Link className="special-button" id="onReg" to="/login">

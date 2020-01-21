@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 import Frame from "../frames/cult-frame.png";
 
 const CulturalCard = ({ height, price, eventInfo, history, match, type }) => {
-  const img = `http://localhost/events_poster/${eventInfo.name}.jpg`;
+  const imgpath = eventInfo.name.split(' ').join('_');
+  const img = `http://localhost/events_poster/${imgpath}.jpg`;
   return (
     <Link
       to={`/events/${
-        type === "2"
+        type === "4"
           ? "prefest"
-          : type === "3"
+          : type === "6"
           ? "informal"
-          : type === "4"
+          : type === "5"
           ? "workshop"
           : "cultural"
       }/${eventInfo.eventId}`}

@@ -12,6 +12,15 @@ export default class Dash1 extends Component {
     }
 
 
+  logout = (e) => {
+    e.preventDefault();
+    axios.get('/auth/logout')
+      .then(res => {
+        localStorage.setItem('loggedin', false);
+        localStorage.removeItem('user');
+      });
+  }
+  
   handleChange = route => {
     if (route === "profile") {
       this.setState({ render: <Profile /> });
@@ -45,11 +54,11 @@ export default class Dash1 extends Component {
               <span onClick={() => this.handleChange("events")}>Events</span>
             </li>
             <li className="edit">
-              <span onClick={() => this.handleChange("comming")}>xyz</span>
+              <span onClick={() => this.handleChange("comming")}>Accomodation</span>
             </li>
 
             <li className="users">
-              <span>Log Out</span>
+              <span onClick={this.logout}>Log Out</span>
             </li>
           </ul>
         </nav>

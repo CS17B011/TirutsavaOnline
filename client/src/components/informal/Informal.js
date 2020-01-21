@@ -171,7 +171,7 @@ class Informal extends React.Component {
                     key={eve.eventId}
                     height="50"
                     price="50"
-                    type="3"
+                    type="6"
                     id={eve.eventId}
                     eventInfo={eve}
                   />
@@ -203,7 +203,7 @@ class Informal extends React.Component {
                 return (
                   <CulturalCard
                     key={eve.eventId}
-                    type="3"
+                    type="6"
                     height="35"
                     price="50"
                     id={eve.eventId}

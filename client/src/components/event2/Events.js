@@ -144,7 +144,7 @@ class Events extends React.Component {
           <div className="video-text">
             <a
               class="link link--kukuri"
-              href="/comingsoon"
+              href="/events/workshop"
               data-letters="WORKSHOP"
             >
               WORKSHOP
@@ -158,7 +158,7 @@ class Events extends React.Component {
           <div className="video-text">
             <a
               class="link link--kukuri"
-              href="/comingsoon"
+              href="/events/informal"
               data-letters="INFORMALS"
             >
               INFORMALS

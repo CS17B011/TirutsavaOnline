@@ -172,7 +172,7 @@ class Prefest extends React.Component {
                     key={eve.eventId}
                     height="50"
                     price="50"
-                    type="2"
+                    type="4"
                     id={eve.eventId}
                     eventInfo={eve}
                   />
@@ -204,7 +204,7 @@ class Prefest extends React.Component {
                 return (
                   <CulturalCard
                     key={eve.eventId}
-                    type="2"
+                    type="4"
                     height="35"
                     price="50"
                     id={eve.eventId}

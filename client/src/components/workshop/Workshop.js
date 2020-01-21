@@ -17,7 +17,7 @@ class Workshop extends React.Component {
   componentDidMount() {
     axios.get("/api/events/type/5").then(res => {
       this.setState({ events: res.data });
-      console.log("hey");
+      //console.log("hey");
       // console.log(events);
     });
   }
@@ -171,7 +171,7 @@ class Workshop extends React.Component {
                     key={eve.eventId}
                     height="50"
                     price="50"
-                    type="4"
+                    type="5"
                     id={eve.eventId}
                     eventInfo={eve}
                   />
@@ -203,7 +203,7 @@ class Workshop extends React.Component {
                 return (
                   <CulturalCard
                     key={eve.eventId}
-                    type="4"
+                    type="5"
                     height="35"
                     price="50"
                     id={eve.eventId}
