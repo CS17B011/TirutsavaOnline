@@ -137,20 +137,6 @@ class Events extends React.Component {
             </a>
           </div>
         </div>
-        <div className="slider-child child5">
-          <video className="video" autoPlay loop muted>
-            <source src={cult_vid} type="video/mp4" />
-          </video>
-          <div className="video-text">
-            <a
-              class="link link--kukuri"
-              href="/events/workshop"
-              data-letters="WORKSHOP"
-            >
-              WORKSHOP
-            </a>
-          </div>
-        </div>
         <div className="slider-child child6">
           <video className="video" autoPlay loop muted>
             <source src={online_vid} type="video/mp4" />

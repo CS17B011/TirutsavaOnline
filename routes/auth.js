@@ -169,7 +169,7 @@ router.get('/dashboard', loggedin, (req, res) => {
 
 //Call back Route
 router.get('/google/callback', passport.authenticate('google'), (req, res) => {
-	res.redirect('http://localhost/dashboard'); //'http://localhost'
+	res.redirect('http://tirutsava.com/dashboard'); //'http://localhost'
 });
 
 

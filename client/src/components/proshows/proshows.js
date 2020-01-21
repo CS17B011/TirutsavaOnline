@@ -9,12 +9,44 @@ import Swal from 'sweetalert2';
 
 const ProjectsPage = () => {
 
-	const handleRegister = (e) => {
+	const handleRegisterc = (e) => {
 		e.preventDefault();
 		Axios.get('/auth/status')
 			.then((res) => {
 				if (res.data.loggedin)
-					window.location.href = 'https://imjo.in/pgF8zv';
+					window.location.href = 'https://imjo.in/uaXZcM';
+				else {
+					Swal.fire({
+						icon: 'error',
+						title: 'Registraion Failed!',
+						text: 'If you are not logged in then log in first!!'
+					})
+				}
+			});
+	}
+
+	const handleRegisterr = (e) => {
+		e.preventDefault();
+		Axios.get('/auth/status')
+			.then((res) => {
+				if (res.data.loggedin)
+					window.location.href = 'https://imjo.in/5nYqca';
+				else {
+					Swal.fire({
+						icon: 'error',
+						title: 'Registraion Failed!',
+						text: 'If you are not logged in then log in first!!'
+					})
+				}
+			});
+	}
+
+	const handleRegisterg = (e) => {
+		e.preventDefault();
+		Axios.get('/auth/status')
+			.then((res) => {
+				if (res.data.loggedin)
+					window.location.href = 'https://imjo.in/NXv47Y';
 				else {
 					Swal.fire({
 						icon: 'error',
@@ -103,7 +135,7 @@ const ProjectsPage = () => {
 							<p className="proshows-entry-fee">ENTRY FEE: Rs.250</p>
 							<div className="buttons">
 								{" "}
-								<button className="bt-hover color-7" onClick={handleRegister}>Register</button>
+								<button className="bt-hover color-7" onClick={handleRegisterc}>Register</button>
 							</div>
 						</MDBCol>
 					</MDBRow>
@@ -140,7 +172,7 @@ const ProjectsPage = () => {
 								<MDBCol style={{ justifyContent: "center" }}>
 									<div className="buttons">
 										{" "}
-										<button className="bt-hover color-7">Register</button>
+										<button className="bt-hover color-7" onClick={handleRegisterr}>Register</button>
 									</div>
 								</MDBCol>
 							</MDBRow>
@@ -209,7 +241,7 @@ const ProjectsPage = () => {
 								<MDBCol style={{ justifyContent: "center" }}>
 									<div className="buttons">
 										{" "}
-										<button className="bt-hover color-7">Register</button>
+										<button className="bt-hover color-7" onClick={handleRegisterg}>Register</button>
 									</div>
 								</MDBCol>
 							</MDBRow>

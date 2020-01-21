@@ -88,9 +88,8 @@ router.post('/register', loggedin, (req, res) => {
 	Event.findOne({ eventId: req.body.eventId })
 		.then((event) => {
 			if (event) {
-				Insta.setKeys(process.env.TEST_API_KEY, process.env.TEST_AUTH_TOKEN);
+				Insta.setKeys(process.env.INSTA_PRIVATE_API_KEY, process.env.INSTA_AUTH_TOKEN);
 				const data = new Insta.PaymentData();
-				Insta.isSandboxMode(true);
 				var type;
 				const user = req.session.passport.user;
 				if (user.googleid)

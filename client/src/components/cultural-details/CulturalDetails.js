@@ -82,8 +82,12 @@ class CulturalDetails extends React.Component {
 
 	render() {
 		let img;
+		let iname;
 		if (this.state.event.name)
-			img = `http://tirutsava.com/events_poster/${this.state.event.name}.jpg`;
+		{
+			iname = this.state.event.name.split(' ').join('_');
+			img = `http://tirutsava.com/events_poster/${iname}.jpg`;
+		}
 		else
 			img = ''
 		return (
