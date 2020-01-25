@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.84473ee7.chunk.css",
-    "main.js": "/static/js/main.920361dd.chunk.js",
-    "main.js.map": "/static/js/main.920361dd.chunk.js.map",
+    "main.css": "/static/css/main.d4a0851c.chunk.css",
+    "main.js": "/static/js/main.4ad2f18e.chunk.js",
+    "main.js.map": "/static/js/main.4ad2f18e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d07f956b.js",
     "runtime-main.js.map": "/static/js/runtime-main.d07f956b.js.map",
     "static/css/2.1c5f909d.chunk.css": "/static/css/2.1c5f909d.chunk.css",
     "static/js/2.1b28eff6.chunk.js": "/static/js/2.1b28eff6.chunk.js",
     "static/js/2.1b28eff6.chunk.js.map": "/static/js/2.1b28eff6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.055f405620b18841274e2b0bd9608c71.js": "/precache-manifest.055f405620b18841274e2b0bd9608c71.js",
+    "precache-manifest.e1f87b88e60c11226f5a6fa7a8f71650.js": "/precache-manifest.e1f87b88e60c11226f5a6fa7a8f71650.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1c5f909d.chunk.css.map": "/static/css/2.1c5f909d.chunk.css.map",
-    "static/css/main.84473ee7.chunk.css.map": "/static/css/main.84473ee7.chunk.css.map",
+    "static/css/main.d4a0851c.chunk.css.map": "/static/css/main.d4a0851c.chunk.css.map",
     "static/js/2.1b28eff6.chunk.js.LICENSE": "/static/js/2.1b28eff6.chunk.js.LICENSE",
     "static/media/navbar.css": "/static/media/Azonix.b8276efa.ttf",
     "static/media/mdb.css": "/static/media/arrow_right.8ef6a08c.svg",
     "static/media/Untitled-1.png": "/static/media/Untitled-1.ed240154.png",
     "static/media/AboutUs.css": "/static/media/about_logo.af6bb797.png",
-    "static/media/index.css": "/static/media/arrow-down-mint.f1fdf59f.svg",
+    "static/media/index.css": "/static/media/arrow-down-mint.4a5164ae.svg",
     "static/media/TechnicalEvents.css": "/static/media/background-technical.7ada761a.png",
     "static/media/home.css": "/static/media/bg.b916e53a.jpg",
     "static/media/cult-back-vid.mp4": "/static/media/cult-back-vid.bdb05362.mp4",
@@ -42,7 +42,7 @@
     "static/js/runtime-main.d07f956b.js",
     "static/css/2.1c5f909d.chunk.css",
     "static/js/2.1b28eff6.chunk.js",
-    "static/css/main.84473ee7.chunk.css",
-    "static/js/main.920361dd.chunk.js"
+    "static/css/main.d4a0851c.chunk.css",
+    "static/js/main.4ad2f18e.chunk.js"
   ]
 }
