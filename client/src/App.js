@@ -81,8 +81,8 @@ const App = () => {
           />
           <Route exact path="/events/prefest/:id" component={CulturalDetails} />
 
-          <Route exact path="/events/informal/:id" component={CulturalDetails} />
-          <Route exact path="/events/informal" component={Informal} />
+          <Route exact path="/events/informals/:id" component={CulturalDetails} />
+          <Route exact path="/events/informals" component={Informal} />
 
           <Route exact path="/events/workshop/:id" component={CulturalDetails} />
           <Route exact path="/events/workshop" component={Workshop} />

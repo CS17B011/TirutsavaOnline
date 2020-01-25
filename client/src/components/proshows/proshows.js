@@ -17,10 +17,19 @@ const ProjectsPage = () => {
 					window.location.href = 'https://imjo.in/uaXZcM';
 				else {
 					Swal.fire({
-						icon: 'error',
-						title: 'Registraion Failed!',
-						text: 'If you are not logged in then log in first!!'
+						icon: 'info',
+						title: 'Registration Failed!!',
+						text: 'If you are not logged in sign in first!',
+						allowOutsideClick: false,
+						cancelButtonText: 'Cancel',
+						showCancelButton: true,
+						confirmButtonText: 'Login',
+						confirmButtonColor: '#136207'
 					})
+						.then(res => {
+							if (res.value)
+								window.location.href = 'http://tirutsava.com/login';
+						})
 				}
 			});
 	}
@@ -33,10 +42,19 @@ const ProjectsPage = () => {
 					window.location.href = 'https://imjo.in/5nYqca';
 				else {
 					Swal.fire({
-						icon: 'error',
-						title: 'Registraion Failed!',
-						text: 'If you are not logged in then log in first!!'
+						icon: 'info',
+						title: 'Registration Failed!!',
+						text: 'If you are not logged in sign in first!',
+						allowOutsideClick: false,
+						cancelButtonText: 'Cancel',
+						showCancelButton: true,
+						confirmButtonText: 'Login',
+						confirmButtonColor: '#136207'
 					})
+						.then(res => {
+							if (res.value)
+								window.location.href = 'http://tirutsava.com/login';
+						})
 				}
 			});
 	}
@@ -49,10 +67,19 @@ const ProjectsPage = () => {
 					window.location.href = 'https://imjo.in/NXv47Y';
 				else {
 					Swal.fire({
-						icon: 'error',
-						title: 'Registraion Failed!',
-						text: 'If you are not logged in then log in first!!'
+						icon: 'info',
+						title: 'Registration Failed!!',
+						text: 'If you are not logged in sign in first!',
+						allowOutsideClick: false,
+						cancelButtonText: 'Cancel',
+						showCancelButton: true,
+						confirmButtonText: 'Login',
+						confirmButtonColor: '#136207'
 					})
+						.then(res => {
+							if (res.value)
+								window.location.href = 'http://tirutsava.com/login';
+						})
 				}
 			});
 	}

@@ -144,7 +144,7 @@ class Events extends React.Component {
           <div className="video-text">
             <a
               class="link link--kukuri"
-              href="/events/informal"
+              href="/events/informals"
               data-letters="INFORMALS"
             >
               INFORMALS

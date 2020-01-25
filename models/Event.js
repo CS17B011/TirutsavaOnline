@@ -24,6 +24,34 @@ const EventSchema = mongoose.Schema({
 	entryfee: {
 		type: Number,
 		required: true
+	},
+	entryfee: {
+		type: Number,
+		required: true
+	},
+	eventDate: {
+		type: String,
+		default: ""
+	},
+	eventTime: {
+		type: String,
+		default: ""
+	},
+	venue: {
+		type: String,
+		value: ""
+	},
+	registrationClose: {
+		type: String,
+		default: null
+	},
+	submissionMail: {
+		type: String,
+		default: ""
+	},
+	cashPrize: {
+		type: Number,
+		default: 0
 	}
 });
 

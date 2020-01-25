@@ -1,0 +1,188 @@
+import React from "react";
+import Frame from "../frames/online-frame.png";
+import axios from "axios";
+import "./OnlineDetails.css";
+import Swal from 'sweetalert2';
+
+class EventDetails extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			event: {}
+		};
+	}
+
+	componentDidMount() {
+		const { id } = this.props.match.params;
+		axios.get(`/api/events/${id}`).then(res => {
+			this.setState({ event: res.data });
+		});
+	}
+
+	handlePayment = (e) => {
+		e.preventDefault();
+		if (this.state.event)
+		{
+			if (this.state.event.entryfee <= 9) 
+			{
+				const data = {
+					event_id: this.state.event.eventId
+				}
+				axios.post('/api/events/registerfree', data)
+					.then(res => {
+						if (!res.data.valid) {
+							Swal.fire({
+								icon: 'info',
+								title: 'Registration Failed!!',
+								text: 'If you are not logged in sign in first!',
+								allowOutsideClick: false,
+								cancelButtonText: 'Cancel',
+								showCancelButton: true,
+								confirmButtonText: 'Login',
+								confirmButtonColor: '#136207'
+							})
+								.then(res => {
+									if (res.value)
+										window.location.href = 'http://tirutsava.com/login';
+							})
+						}
+						else if(res.data.valid && !res.data.already){
+							Swal.fire({
+								icon: 'success',
+								title: 'Registration Completed!',
+								text: 'You are registered for this event!!'
+							});
+						}Swal.fire({
+                                                                icon: 'info',
+                                                                title: 'Already Registered',
+                                                                text: 'You can Register to this event only one.'
+                                                        });
+
+						else{
+							Swal.fire({
+								icon: 'info',
+								title: 'Already Registered',
+								text: 'You can Register to this event only one.'
+							});
+						}
+					})
+			}
+			else
+			{
+				axios.post('/api/events/register', this.state.event)
+					.then((res) => {
+						//console.log(res.data.success);
+						if (res.data.success) {
+							window.location.href = res.data.payment_request.longurl;
+						}
+						else if(!res.data.valid){
+							Swal.fire({
+								icon: 'info',
+								title: 'Registration Failed!!',
+								text: 'If you are not logged in sign in first!',
+								allowOutsideClick: false,
+								cancelButtonText: 'Cancel',
+Swal.fire({
+                                                                icon: 'info',
+                                                                title: 'Registration Failed!!',
+                                                                text: 'If you are not logged in sign in first!',
+                                                                allowOutsideClick: false,
+                                                                cancelButtonText: 'Cancel',
+                                                                showCancelButton: true,
+                                                                confirmButtonText: 'Login',
+Swal.fire({
+                                                                icon: 'info',
+                                                                title: 'Registration Failed!!',
+                                                                text: 'If you are not logged in sign in first!',
+                                                                allowOutsideClick: false,
+                                                                cancelButtonText: 'Cancel',
+                                                                showCancelButton: true,
+                                                                confirmButtonText: 'Login',
+                                                                confirmButtonColor: '#136207'
+                                                        })
+                                                                .then(res => {
+                                                                        if (res.value)
+                                                                                window.location.href = 'http://tirutsava.com/login';
+                                                        })
+                                                                confirmButtonColor: '#136207'
+								showCancelButton: true,
+								confirmButtonText: 'Login',
+Swal.fire({
+                                                                icon: 'info',
+                                                                title: 'Registration Failed!!',
+                                                                text: 'If you are not logged in sign in first!',
+                                                                allowOutsideClick: false,
+                                                                cancelButtonText: 'Cancel',
+                                                                showCancelButton: true,
+                                                                confirmButtonText: 'Login',
+                                                                confirmButtonColor: '#136207'
+                                                        })
+                                                                .then(res => {
+                                                                        if (res.value)
+                                                                                window.location.href = 'http://tirutsava.com/login';
+                                                        })
+								confirmButtonColor: '#136207'
+							})
+								.then(res => {
+									if (res.value)
+										window.location.href = 'http://tirutsava.com/login';
+							})
+						}
+						else if(res.data.valid && res.data.already){
+							Swal.fire({
+                                                                icon: 'info',
+                                                                title: 'Already Registered',
+                                                                text: 'You can Register to this event only one.'
+                                                        });
+
+						}
+					})
+			}
+		}
+	}
+
+	render() {
+		let img;
+		let iname;
+		if (this.state.event.name)
+		{
+			iname = this.state.event.name.split(' ').join('_');
+			img = `http://tirutsava.com/events_poster/${iname}.jpeg`;
+		}
+		else img = "";
+		return (
+			<div className="online-details">
+				<div className="event-details-poster">
+					<img src={Frame} className="event-details-img" alt="Online Details" />
+					<img src={img} className="adjustmentsonline" alt="Event Details" />
+				</div>
+				<div className="event-details-text online-scroll">
+					<h1 align="center">
+						<b>
+							<u>{this.state.event.name}</u>
+						</b>
+					</h1>
+					<p>{this.state.event.description}</p>
+					<p>
+						<b>NOTE:</b>
+						<br/>
+						&#8226; Only the group leader needs to do the payment if it is a group event.	
+					</p>
+					<div style={{ alignContent: "center", boxAlign: "center" }}>
+					<a href={`http://tirutsava.com/events_rulebook/${this.state.event.name}.pdf`} target="_blank">
+						<button
+							className="btn btn-default btn-lg btn-primary">
+							RuleBook
+            </button>
+					</a>
+						<button className="btn btn-default btn-lg btn-primary" onClick={this.handlePayment}>
+							Register+
+            </button>
+					</div>
+				</div>
+			</div>
+		);
+	}
+}
+
+export default EventDetails;

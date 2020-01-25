@@ -171,7 +171,7 @@ class Login extends Component {
 											transform: "translateX(-50px)"
 										}}
 									>
-										REGISTER
+										SIGN UP
                   </button>
 								</Link>
 							</div>
