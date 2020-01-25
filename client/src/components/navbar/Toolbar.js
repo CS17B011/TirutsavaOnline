@@ -39,6 +39,9 @@ const toolbar = props => (
             <Link to="/events">EVENTS</Link>
           </li>
           <li>
+            <Link to="/sponsors">SPONSORS</Link>
+          </li>
+          <li>
             <Link to="/faq">FAQs</Link>
           </li>
           <li>

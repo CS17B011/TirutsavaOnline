@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.d4a0851c.chunk.css",
-    "main.js": "/static/js/main.4ad2f18e.chunk.js",
-    "main.js.map": "/static/js/main.4ad2f18e.chunk.js.map",
+    "main.js": "/static/js/main.ae0e5847.chunk.js",
+    "main.js.map": "/static/js/main.ae0e5847.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d07f956b.js",
     "runtime-main.js.map": "/static/js/runtime-main.d07f956b.js.map",
     "static/css/2.1c5f909d.chunk.css": "/static/css/2.1c5f909d.chunk.css",
-    "static/js/2.1b28eff6.chunk.js": "/static/js/2.1b28eff6.chunk.js",
-    "static/js/2.1b28eff6.chunk.js.map": "/static/js/2.1b28eff6.chunk.js.map",
+    "static/js/2.0faf46c9.chunk.js": "/static/js/2.0faf46c9.chunk.js",
+    "static/js/2.0faf46c9.chunk.js.map": "/static/js/2.0faf46c9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e1f87b88e60c11226f5a6fa7a8f71650.js": "/precache-manifest.e1f87b88e60c11226f5a6fa7a8f71650.js",
+    "precache-manifest.c93bca61be4fb6ae1c2d0285cee9c430.js": "/precache-manifest.c93bca61be4fb6ae1c2d0285cee9c430.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1c5f909d.chunk.css.map": "/static/css/2.1c5f909d.chunk.css.map",
     "static/css/main.d4a0851c.chunk.css.map": "/static/css/main.d4a0851c.chunk.css.map",
-    "static/js/2.1b28eff6.chunk.js.LICENSE": "/static/js/2.1b28eff6.chunk.js.LICENSE",
+    "static/js/2.0faf46c9.chunk.js.LICENSE": "/static/js/2.0faf46c9.chunk.js.LICENSE",
     "static/media/navbar.css": "/static/media/Azonix.b8276efa.ttf",
     "static/media/mdb.css": "/static/media/arrow_right.8ef6a08c.svg",
     "static/media/Untitled-1.png": "/static/media/Untitled-1.ed240154.png",
@@ -32,6 +32,7 @@
     "static/media/online-frame.png": "/static/media/online-frame.14bfe536.png",
     "static/media/Login.css": "/static/media/registration-page.4e771c2c.png",
     "static/media/revanth.png": "/static/media/revanth.fa327fb8.png",
+    "static/media/schedule.jpeg": "/static/media/schedule.80d4527c.jpeg",
     "static/media/tech-back-vid.mp4": "/static/media/tech-back-vid.c77f6120.mp4",
     "static/media/technical-frame.png": "/static/media/technical-frame.7179bccc.png",
     "static/media/tirutsava.png": "/static/media/tirutsava.cb171d2b.png",
@@ -41,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.d07f956b.js",
     "static/css/2.1c5f909d.chunk.css",
-    "static/js/2.1b28eff6.chunk.js",
+    "static/js/2.0faf46c9.chunk.js",
     "static/css/main.d4a0851c.chunk.css",
-    "static/js/main.4ad2f18e.chunk.js"
+    "static/js/main.ae0e5847.chunk.js"
   ]
 }
