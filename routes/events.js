@@ -73,6 +73,7 @@ router.post('/registerfree', loggedin, async(req, res, next) => {
 	res.send({ valid: true , already: already});
 });
 
+/*
 router.post('/update', async(req,res) => {
 	await Event.updateOne({eventId: req.body.eventId}, {
 		$set:{
@@ -98,6 +99,7 @@ router.post('/update', async(req,res) => {
 	});
 });
 
+
 router.post('/create', (req, res) => {
 	let nnm = 0;
 	Event.estimatedDocumentCount((err, res) => {
@@ -116,6 +118,7 @@ router.post('/create', (req, res) => {
 				.then(event => res.json(event));
 		});
 });
+*/
 
 //api/events/register
 router.post('/register', loggedin, async(req, res) => {
