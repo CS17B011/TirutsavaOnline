@@ -1,0 +1,67 @@
+//INSTALL : npm install google-spreadsheet
+const GoogleSpreadsheet = require('google-spreadsheet');
+const {promisify}=require('util');
+var mongoose=require('mongoose'),
+LocalUser = require('./models/LocalUser.js');
+GoogleUser = require('./models/GoogleUser.js');
+
+//CONNECTION
+mongoose.connect("mongodb://localhost:27017/tirutsava2020", {useNewUrlParser: true, useCreateIndex: true})
+    .then(() => console.log('Database is Connected...'))
+    .catch((err) => console.log(err));
+
+
+
+const creds = require('./client_secret.json');
+
+//FAQs Part.
+
+function printQuery(event){
+	console.log(event); //For Debugging purpose
+}
+
+async function accessSpreadsheet(){
+	const doc = new GoogleSpreadsheet('1sdOntCOMEJPGmdDKycHOBaC_-kqRyOQS6vkahJQKFAw');
+	await promisify(doc.useServiceAccountAuth)(creds);
+	const info = await promisify(doc.getInfo)()
+	console.log(info.worksheets.length);
+	var sheet=info.worksheets[0];
+	await doc.removeWorksheet(sheet);
+	sheet = await doc.addWorkshee	const rows = await promisify(sheet.getRows)({
+		offset:1
+	});
+	rows.forEach(async row =>{
+		// console.log(row);
+		// printFAQ(row);
+		//await row.del();
+	});
+	
+	//DELETING OLDER ENTRIES, BEFORE WRITING AFRESH.
+	for(var i=0;i<rows.length;i++){
+		if(rows[i])
+		await rows[i].del();
+	}
+	
+	//CREATING A NEW ROW:
+	LocalUser.find({registeredeventids: 25},async function(err, users){
+		users.forEach(async (user) =>{
+			var row={
+				Name: user.name,
+				Mail: user.email
+			};
+			await promisify(sheet.addRow)(row);
+		});
+	});
+	GoogleUser.find({registeredeventids: 25},async function(err, users){
+		users.forEach(async (user) =>{
+			var row={
+				Name: user.name,
+				Mail: user.email
+			};
+			await promisify(sheet.addRow)(row);
+		});
+	});
+	
+}
+
+accessSpreadsheet();
