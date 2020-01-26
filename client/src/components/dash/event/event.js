@@ -6,10 +6,8 @@ import axios from 'axios';
 export default class event extends React.Component {
   state = {};
   componentDidMount(){
-    axios.get('http://tirutsava.com/auth/dashboard', {withCredentials: true}).then(
+    axios.get('/auth/dashboard', {withCredentials: true}).then(
       data => {
-        //console.log("Dashboard data");
-        //console.log(data);
         this.setState({
           events: data.data.events
         });

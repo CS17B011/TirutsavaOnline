@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
+
 import { GoogleLogin } from "react-google-login";
 import { Link } from "react-router-dom";
 import "./Login.css";
@@ -29,10 +31,12 @@ class Login extends Component {
 				if (res.data.valid)
 				{
 					localStorage.setItem('loggedin', true);
-					window.location.href = 'http://tirutsava.com/dashboard';	
+					//window.location.href = 'http://tirutsava.com/dashboard';
+					return <Redirect to="/dashboard" />
 				}
 				else
-					window.location.href = 'http://tirutsava.com/login';	
+					//window.location.href = 'http://tirutsava.com/login';
+					return <Redirect to="/login" />
 				 //'http://tirutsava.com'
 				//localStorage.setItem('user', res.data.user);
 			})
@@ -44,7 +48,8 @@ class Login extends Component {
 	googleLogin = (e) => {
 		e.preventDefault();
 		localStorage.setItem('loggedin', true);
-		window.location.href = 'http://tirutsava.com/auth/google';
+		//window.location.href = 'http://tirutsava.com/auth/google';
+		window.location.href = '/auth/google';
 	}
 
 	render() {

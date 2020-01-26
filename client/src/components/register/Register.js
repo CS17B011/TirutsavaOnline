@@ -124,7 +124,7 @@ class Register extends Component {
 		this.state.collegeinlist ? (classmod = 1) : (classmod = 0);
 		return (
 			<div className="login">
-				<h1>REGISTER</h1>
+				<h1>SIGN UP</h1>
 				<div className="login-page reg">
 					<div className="box1"></div>
 					<div className="box2 box2scroll">
@@ -298,7 +298,7 @@ class Register extends Component {
 							<div className="buttons buttons1">
 								{" "}
 								<button className="btn-hover color-1" type="submit">
-									REGISTER
+									SIGN UP
                 				</button>
 							</div>
 

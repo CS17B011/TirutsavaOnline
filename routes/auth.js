@@ -43,6 +43,28 @@ router.post('/registration', (req, res) => {
 		});
 });
 
+router.post('/googleRegistration', loggedin, (req,res) => {
+	var user = req.session.passport.user;
+	if(user.googleid){
+		GoogleUser.updateOne({_id: user._id}, {
+			$set: {
+				name: req.body.name,
+				college: req.body.college,
+				city: req.body.city,
+				state: req.body.state,
+				phonenum: req.body.phonenum,
+				gender: req.body.gender
+			}
+		})
+		.then(u => {
+			res.send({google: true, registered: true})
+		})
+		.catch(err=> res.send({google:true, registered: false}));
+	} else {
+		res.send({google: false});
+	}
+});
+
 router.get('/logout', loggedin, (req, res) => {
 	req.logout();
 	res.send({ logout: true });
@@ -122,7 +144,7 @@ router.get('/dashboard', loggedin, (req, res) => {
 				person.college = user.college;
 				person.phonenum = user.phonenum;
 				person.state = user.state;
-				
+
 				//console.log("Length : ",user.registeredeventids.length);
 
 				for (var i = 0; i < user.registeredeventids.length; i++) {

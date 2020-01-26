@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
 
 import "./Register.css";
+//import { city_state, state_india } from "./list";
+import Axios from "axios";
+import Swal from 'sweetalert2';
 
 class Googleregister extends Component {
   constructor() {
@@ -32,18 +36,56 @@ class Googleregister extends Component {
       name: this.state.name,
       city: this.state.city,
       state: this.state.statename,
-      phoneNo: this.state.phoneNo
+      phonenum: this.state.phoneNo
     };
-    // this.setState({
-    //   email: "",
-    //   password: "",
-    //   college: "",
-    //   name: "",
-    //   city: "",
-    //   statename: "",
-    //   phoneNo: ""
-    // });
-    //console.log(userData);
+    Axios.post('/auth/googleRegistration', userData)
+      .then((res) => {
+        console.log(res);
+        if (res.data.google && res.data.registered) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Registration Successfull!!'
+          })
+            .then(() => {
+              window.location.href = 'http://tirutsava.com/dashboard';
+              //return <Redirect to="/dashboard" />
+            });
+        }
+        else if (!res.data.google) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Not a Google Id!!'
+          })
+            .then(() => {
+              window.location.href = 'http://tirutsava.com/login';
+              //return <Redirect to='/login' />
+            });
+        }
+        else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Error in Registration !! Try again later !!'
+          })
+            .then(() => {
+
+                window.location.href = 'http://tirutsava.com';
+              //return <Redirect to='/' />
+            });
+        }
+      })
+      .catch(err => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Error in Registration !! Try again later !!'
+        })
+          .then(() => {
+            return <Redirect to='/' />
+          });
+      })
   };
 
   responseGoogle = response => {
@@ -55,7 +97,7 @@ class Googleregister extends Component {
     this.state.collegeinlist ? (classmod = 1) : (classmod = 0);
     return (
       <div className="login">
-        <h1>REGISTER</h1>
+        <h1>Google Users</h1>
         <div className="login-page reg">
           <div className="box1"></div>
           <div className="box2 box2scroll">
@@ -91,7 +133,7 @@ class Googleregister extends Component {
                 <span className="normal">OLLEGE</span>
               </div>
 
-              {/* 
+              {/*
 
             <input
               type="text"
@@ -188,7 +230,7 @@ class Googleregister extends Component {
               <div className="buttons buttons1">
                 {" "}
                 <button className="btn-hover color-1" type="submit">
-                  REGISTER
+                  SUBMIT
                 </button>
               </div>
 

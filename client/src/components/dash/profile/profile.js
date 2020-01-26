@@ -1,5 +1,7 @@
 import React from "react";
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 export default class profile extends React.Component {
   state = {
@@ -7,16 +9,23 @@ export default class profile extends React.Component {
   };
 
   componentDidMount(){
-    axios.get('http://tirutsava.com/auth/dashboard', {withCredentials: true}).then(
+    axios.get('/auth/dashboard', {withCredentials: true}).then(
       data => {
         //console.log("Dashboard data");
         //console.log(data);
+        const person = data.data.person;
+        //console.log("person",person);
+        /*if(person.college === "NA" && person.phonenum === "NA" && person.state === "NA"){
+          return <Redirect to="/googleRegister" />
+        }*/
         this.setState({
           person: data.data.person
         });
       }
     )
     .catch(err => console.log(err));
+
+
   }
 
   constructor(props){
@@ -34,7 +43,16 @@ export default class profile extends React.Component {
   }
 
   render() {
-    return (
+    if(this.state.person.college === "NA" && this.state.person.phonenum==="NA"){
+      Swal.fire({
+        icon: 'info',
+        title: 'Needed Basic Info of the Google user',
+        text: 'Basic details of the user are missing, kindly fill the upcoming form to procede.'
+      });
+      return <Redirect to="/googleregister" />
+    }
+    else{
+      return (
       <main role="main" className="my-0">
         <section className="panel important">
           <div className="twothirds">
@@ -96,5 +114,6 @@ export default class profile extends React.Component {
         </section>
       </main>
     );
+    }
   }
 }
