@@ -41,6 +41,7 @@ app.get('/jsonfail', (req, res) => {
 
 app.use("/api/events" ,require("./routes/events.js"));
 app.use("/api/queries", require("./routes/queries.js"));
+app.use("/api/seeder", require("./routes/seeder.js"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "client/build")));
 
