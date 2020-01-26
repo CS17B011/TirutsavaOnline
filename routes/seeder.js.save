@@ -8,14 +8,14 @@ LocalUser = require('../models/LocalUser.js');
 GoogleUser = require('../models/GoogleUser.js');
 
 router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
-	const eventId = parseInt(req.params.eventId);
-	const sheetId = parseInt(req.params.sheetId);
+	const eventId = req.params.eventId;
+	const sheetId = req.params.sheetId;
 	//console.log(eventId, sheetId);
   const doc = new GoogleSpreadsheet('1sdOntCOMEJPGmdDKycHOBaC_-kqRyOQS6vkahJQKFAw');
 	await promisify(doc.useServiceAccountAuth)(creds);
 	const inf = await promisify(doc.getInfo)()
 	//console.log(inf.worksheets.length);
-	var sheet=inf.worksheets[sheetId];
+	var sheet=inf.worksheets[1];
 	const rows = await promisify(sheet.getRows)({
 		offset:1
 	});
@@ -31,7 +31,7 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 	}
 
 	//CREATING A NEW ROW:
-	await LocalUser.find({registeredeventids: eventId},async function(err, users){
+	await LocalUser.find({registeredeventids: 25},async function(err, users){
 		users.forEach(async (user) =>{
 			var row={
 				Name: user.name,
@@ -46,7 +46,7 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 			}
 		});
 	});
-	await GoogleUser.find({registeredeventids: eventId},async function(err, users){
+	await GoogleUser.find({registeredeventids: 25},async function(err, users){
                 users.forEach(async (user) =>{
                         var row={
                                 Name: user.name,
@@ -60,7 +60,6 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 			}
                 });
         });
-	//res.render(	<script>	window.close();		</script>);
 	//window.close();
 	//res.redirect('https://docs.google.com/spreadsheets/d/1sdOntCOMEJPGmdDKycHOBaC_-kqRyOQS6vkahJQKFAw/edit?ts=5e2ac1d2#gid=383543029');
 	//res.end();
