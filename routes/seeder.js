@@ -60,11 +60,7 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 			}
                 });
         });
-				res.send("<script>window.close()</script>");
-	//res.render(	<script>	window.close();		</script>);
-	//window.close();
-	//res.redirect('https://docs.google.com/spreadsheets/d/1sdOntCOMEJPGmdDKycHOBaC_-kqRyOQS6vkahJQKFAw/edit?ts=5e2ac1d2#gid=383543029');
-	//res.end();
+				res.send({msg: "Kindly close this tab, sorry for the inconvience"});
 });
 
 module.exports = router;
