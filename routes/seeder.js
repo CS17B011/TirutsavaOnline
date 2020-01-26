@@ -9,9 +9,9 @@ GoogleUser = require('../models/GoogleUser.js');
 
 router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 	const eventId = parseInt(req.params.eventId);
-	const sheetId = parseInt(req.params.sheetId);
+	const sheetId = parseInt(req.params.sheetId) - 1;
 	//console.log(eventId, sheetId);
-  const doc = new GoogleSpreadsheet('1sdOntCOMEJPGmdDKycHOBaC_-kqRyOQS6vkahJQKFAw');
+  	const doc = new GoogleSpreadsheet('1sdOntCOMEJPGmdDKycHOBaC_-kqRyOQS6vkahJQKFAw');
 	await promisify(doc.useServiceAccountAuth)(creds);
 	const inf = await promisify(doc.getInfo)()
 	//console.log(inf.worksheets.length);
@@ -25,7 +25,10 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 		if(rows[i]){
 			detailsPresent.push({
 				Name: rows[i].name,
-				Mail: rows[i].mail
+				Mail: rows[i].mail,
+				Phone: rows[i].phone,
+				College: rows[i].college,
+				State: rows[i].state
 			});
 		}
 	}
@@ -35,7 +38,10 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 		users.forEach(async (user) =>{
 			var row={
 				Name: user.name,
-				Mail: user.email
+				Mail: user.email,
+				Phone: user.phonenum,
+				College: user.college,
+				State: user.state
 			};
 			if(!detailsPresent.some(r => r.Mail===row.Mail && r.Name===row.Name)){
 				detailsPresent.push(row);
