@@ -34,6 +34,7 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 	}
 
 	//CREATING A NEW ROW:
+	if(sheetId!==39){
 	await LocalUser.find({registeredeventids: eventId},async function(err, users){
 		users.forEach(async (user) =>{
 			var row={
@@ -56,7 +57,10 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
                 users.forEach(async (user) =>{
                         var row={
                                 Name: user.name,
-                                Mail: user.email
+                                Mail: user.email,
+								Phone: user.phonenum,
+                                College: user.college,
+                                State: user.state
                         };
 			if(!detailsPresent.some(r => r.Mail === row.Mail && r.Name === row.Name)){
                         await promisify(sheet.addRow)(row);
@@ -66,6 +70,48 @@ router.get('/updateGooglesheet/:eventId/:sheetId', async (req,res) => {
 			}
                 });
         });
+	}
+	//IF SHEET ID IS 39
+	else {
+		await LocalUser.find({},async function(err, users){
+		users.forEach(async (user) =>{
+			var row={
+				Name: user.name,
+				Mail: user.email,
+				Phone: user.phonenum,
+				College: user.college,
+				State: user.state,
+				Events: user.registeredeventids.length
+			};
+			if(!detailsPresent.some(r => r.Mail===row.Mail && r.Name===row.Name)){
+				detailsPresent.push(row);
+				await promisify(sheet.addRow)(row);
+
+			}
+			else {
+			}
+		});
+	});
+	await GoogleUser.find({},async function(err, users){
+                users.forEach(async (user) =>{
+                        var row={
+                                Name: user.name,
+                                Mail: user.email,
+								Phone: user.phonenum,
+                                College: user.college,
+                                State: user.state,
+                                Events: user.registeredeventids.length
+                        };
+			if(!detailsPresent.some(r => r.Mail === row.Mail && r.Name === row.Name)){
+                        await promisify(sheet.addRow)(row);
+			detailsPresent.push(row);
+			}
+			else{
+			}
+                });
+        });
+	}
+
 				res.send({msg: "Kindly close this tab, sorry for the inconvience"});
 });
 

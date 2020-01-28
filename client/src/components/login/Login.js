@@ -5,6 +5,7 @@ import { GoogleLogin } from "react-google-login";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import Axios from "axios";
+import Swal from 'sweetalert2';
 
 class Login extends Component {
 	constructor() {
@@ -31,12 +32,16 @@ class Login extends Component {
 				if (res.data.valid)
 				{
 					localStorage.setItem('loggedin', true);
-					//window.location.href = 'http://tirutsava.com/dashboard';
-					return <Redirect to="/dashboard" />
+					window.location.href = 'http://tirutsava.com/dashboard';
 				}
 				else
-					//window.location.href = 'http://tirutsava.com/login';
-					return <Redirect to="/login" />
+				{
+					Swal.fire({
+						icon: 'error',
+						title: 'Invalid Email id or Password',
+						text: 'Try again!'
+					});
+				}
 				 //'http://tirutsava.com'
 				//localStorage.setItem('user', res.data.user);
 			})

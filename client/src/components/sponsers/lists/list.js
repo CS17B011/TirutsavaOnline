@@ -234,7 +234,7 @@ export default function List() {
                         </ul>
                       </figcaption>
                     </figure>
-                    <h4 style={sap}>Nivea</h4>
+                    <h4 style={sap}>Venusgeo</h4>
                     <div className="button button-silver">Silver Sponsor</div>
                   </div>
                 </div>
@@ -779,7 +779,7 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://tirutsava.com/sp_logo/lti.png"
+                        src="http://tirutsava.com/sp_logo/LTI.png"
                         alt=""
                         className="img-responsive"
                         style={{ height: "150px" }}
