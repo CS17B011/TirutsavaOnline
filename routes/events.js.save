@@ -105,8 +105,7 @@ router.post('/create', (req, res) => {
 	Event.estimatedDocumentCount((err, res) => {
 		if (!err)
 			nnm = res + 1;
-	})
-		.then(() => {
+	})		.then(() => {
 			const newEvent = Event({
 				name: req.body.name,
 				eventId: nnm,
@@ -207,9 +206,7 @@ router.get('/register/callback', async(req, res) => {
 				{
 					$push: { participants: name_id }
 				})
-				.then( data => {
-					res.redirect('http://tirutsava.com/dashboard');
-				});
+			res.redirect('http://tirutsava.com/dashboard');
 		}
 		else if (responseData.type === 'google') {
 			const name_id = 'g_' + responseData.user_id;
@@ -226,10 +223,8 @@ router.get('/register/callback', async(req, res) => {
 				{
 					$push: { participants: name_id }
 				})
-				.then( data => {
-					res.redirect('http://tirutsava.com/dashboard');
-				})
 		}
+		res.redirect('http://tirutsava.com/dashboard');
 	}
 });
 
