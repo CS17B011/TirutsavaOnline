@@ -36,6 +36,50 @@ export default function List() {
                   >
                     <figure>
                       <img
+                        src="http://tirutsava.com/sp_logo/airtel.png"
+                        alt=""
+                        className="img-responsive"
+                        style={{ height: "300px" }}
+                      />
+                      <figcaption>
+                        <br />
+                        <br />
+                        <ul>
+                          <li>
+                            <a href="https://www.facebook.com/AirtelIndia/">
+                              <i className="fab fa-facebook fa-2x"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com/airtelindia">
+                              <i className="fab fa-twitter fa-2x"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://in.linkedin.com/company/airtel">
+                              <i className="fab fa-linkedin fa-2x"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </figcaption>
+                    </figure>
+                    <h4 style={sap}>Airtel</h4>
+                    <div className="button button-rainbow" style={italic}>
+                      <div className="rainbow-box">Title Sponsor</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row" style={{ justifyContent: "space-around" }}>
+                <div className="col-md-5">
+                  <div
+                    className="team-member"
+                    style={{
+                      backgroundSize: "cover"
+                    }}
+                  >
+                    <figure>
+                      <img
                         src="http://tirutsava.com/sp_logo/amara_raja.png"
                         alt=""
                         className="img-responsive"
@@ -493,7 +537,7 @@ export default function List() {
                     </figure>
                     <h4 style={sap}>Made Easy</h4>
                     <div className="button button-normal">
-                      Education Partner
+                      Gate Exam Partner
                     </div>
                   </div>
                 </div>
@@ -603,10 +647,10 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://tirutsava.com/sp_logo/airtel.png"
-                        alt=""
+                        src="http://tirutsava.com/sp_logo/aadam.png"
+                        alt="Adams school of music"
                         className="img-responsive"
-                        style={{ height: "150px" }}
+                        style={{ height: "113px" }}
                       />
                       <figcaption>
                         <br />
@@ -629,10 +673,8 @@ export default function List() {
                         </ul>
                       </figcaption>
                     </figure>
-                    <h4 style={sap}>Airtel</h4>
-                    <div className="button button-normal">
-                      Marketing Partner
-                    </div>
+                    <h4 style={sap}>Adams School Of Music</h4>
+                    <div className="button button-normal">Singing Partner</div>
                   </div>
                 </div>
                 <div className="col-md-3">
@@ -779,42 +821,6 @@ export default function List() {
                   <div className="team-member">
                     <figure>
                       <img
-                        src="http://tirutsava.com/sp_logo/LTI.png"
-                        alt=""
-                        className="img-responsive"
-                        style={{ height: "150px" }}
-                      />
-                      <figcaption>
-                        <br />
-                        <ul>
-                          <li>
-                            <a href="!#">
-                              <i className="fab fa-facebook fa-2x"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="!#">
-                              <i className="fab fa-twitter fa-2x"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="!#">
-                              <i className="fab fa-linkedin fa-2x"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </figcaption>
-                    </figure>
-                    <h4 style={sap}>LTI </h4>
-                    <div className="button button-normal">
-                      Technical Partner
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="team-member">
-                    <figure>
-                      <img
                         src="http://tirutsava.com/sp_logo/WAF.png"
                         alt=""
                         className="img-responsive"
@@ -944,7 +950,9 @@ export default function List() {
                       </figcaption>
                     </figure>
                     <h4 style={sap}>Exafluence </h4>
-                    <div className="button button-normal">Other Partner</div>
+                    <div className="button button-normal">
+                      Technical Events Partner
+                    </div>
                   </div>
                 </div>{" "}
                 <div className="col-md-3">
