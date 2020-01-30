@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './timer.css';
+import axios from "axios";
+
 class Timer extends Component {
     constructor(props) {
         super(props);

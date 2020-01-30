@@ -49,6 +49,21 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.static(path.join(__dirname, "c3/build")));
 
+app.use("/liveevents/gettime", (req, res) => {
+	const t = new Date();
+	const date = t.getDate();
+	const min = t.getMinutes();
+	const hour = t.getHours();
+	const sec = t.getSeconds();
+	const time = {
+		date: date,
+		hour: hour,
+		min: min,
+		sec:sec
+	}
+	res.send({ time: time });
+});
+
 app.use("/liveevents/c3", (req, res) => {
 	res.sendFile(path.join(__dirname, "c3", "build", "index.html"));
 });

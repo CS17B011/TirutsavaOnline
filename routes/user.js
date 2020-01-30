@@ -3,7 +3,7 @@ const userRouter = express.Router();
 const User = require('../models/C3User');
 const loggedin = require("../services/middleware");
 // READ
-userRouter.get('/', loggedin ,(req, res) => {
+userRouter.get('/',(req, res) => {
     //id = String(id);
     
     /*

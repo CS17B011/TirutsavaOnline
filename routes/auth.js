@@ -12,7 +12,30 @@ router.get('/status', (req, res) => {
 		res.send({ loggedin: true });
 	else
 		res.send({ loggedin: false });
-})
+});
+
+router.get('/c3status', (req, res) => {
+	if (req.isAuthenticated())
+	{
+		var flag = true;
+		/*const user = req.session.passport.user;
+		var flag = false;
+		for (var i = 0; i < user.registeredeventids.length; ++i)
+		{
+			if (user.registeredeventids[i] === 22)
+			{
+				flag = true;
+				break;
+			}	
+		}*/
+		if (flag)
+			res.send({ valid: true });
+		else
+			res.send({ valid: false });
+	}
+	else
+		res.send({ valid: false });
+});
 
 router.post('/registration', (req, res) => {
 	LocalUser.findOne({ email: req.body.email })
