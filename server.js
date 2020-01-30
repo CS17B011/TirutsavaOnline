@@ -37,13 +37,21 @@ app.use('/auth', require('./routes/auth.js'));
 
 app.get('/jsonfail', (req, res) => {
 	res.send({ valid: false });
-})
+});
 
 app.use("/api/events" ,require("./routes/events.js"));
 app.use("/api/queries", require("./routes/queries.js"));
 app.use("/api/seeder", require("./routes/seeder.js"));
+app.use('/c3', require("./routes/c3"));
+app.use('/user', require("./routes/user"));
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "c3/build")));
+
+app.use("/liveevents/c3", (req, res) => {
+	res.sendFile(path.join(__dirname, "c3", "build", "index.html"));
+});
 
 app.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
