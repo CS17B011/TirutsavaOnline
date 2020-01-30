@@ -347,7 +347,7 @@ class Crossword extends Component {
                     }
                 }
                 user.colorValue = colorValue
-                fetch(`http://localhost:4000/user/${this.state.id}`, {method : "put",
+                fetch(`http://tirutsava.com/user/${this.state.id}`, {method : "put",
                 body: JSON.stringify(user),
                 headers : {
                     "Content-Type" : "application/json"
@@ -366,7 +366,7 @@ class Crossword extends Component {
     }
     handleGetHint = () => {
         // Fetching hint
-        fetch('http://localhost:4000/c3')
+        fetch('http://tirutsava.com/c3')
         .then(res => res.json())
         .then(data => {
             let hintArray = data.response[0].hints;
@@ -397,7 +397,7 @@ class Crossword extends Component {
             squareValue.push('#');
             colorValue.push("rgb(46, 14, 231)");
         }
-        fetch('http://localhost:4000/c3')
+        fetch('http://tirutsava.com/c3')
         .then(res => res.json())
         .then(data => {
             this.setState(() => {return {
@@ -408,7 +408,7 @@ class Crossword extends Component {
             }});
         });
 
-        fetch(`http://localhost:4000/user/?id=${this.state.id}`)
+        fetch(`http://tirutsava.com/user/?id=${this.state.id}`)
         .then(res => res.json())
         .then(data => {
             this.setState({
