@@ -3,19 +3,17 @@ const userRouter = express.Router();
 const User = require('../models/C3User');
 const loggedin = require("../services/middleware");
 // READ
-userRouter.get('/',(req, res) => {
+userRouter.get('/',loggedin,(req, res) => {
     //id = String(id);
     
-    /*
     const user = req.session.passport.user;
     var nameid;
     if (user.googleid)
         nameid = "g_" + user._id;
     else
         nameid = "l_" + user._id;
-    */
     
-    var nameid = "l_1";
+    //var nameid = "l_1";
 
     User.findOne({"name_id":nameid}, (err, response) => {
         if (err) res.status(500).json({
@@ -30,6 +28,7 @@ userRouter.get('/',(req, res) => {
 
 // POST
 
+/*
 userRouter.post('/', (req, res) => {
     const user = new User(req.body);
     user.save((err, response) => {
@@ -40,22 +39,20 @@ userRouter.post('/', (req, res) => {
             message : "added"
         })
     })
-})
+})*/
 
 // UPDATE 
 
 userRouter.put('/', loggedin, (req, res) => {
     
-    /*
     const user = req.session.passport.user;
     var nameid;
     if (user.googleid)
         nameid = "g_" + user._id;
     else
         nameid = "l_" + user._id;
-    */
     
-   var nameid = "l_1";
+   //var nameid = "l_1";
 
     User.updateOne({"name_id":nameid}, req.body, {runValidators : true}, (err, response) => {
         if(err) {

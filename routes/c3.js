@@ -26,6 +26,7 @@ c3Router.post('/', (req, res) => {
 })
 
 // UPDATE
+/*
 c3Router.put('/:id', (req, res) => {
     C3.findOneAndUpdate({_id : req.params.id}, req.body, {runValidators : true}, (err, response) => {
         if(err) {
@@ -42,6 +43,7 @@ c3Router.put('/:id', (req, res) => {
         }});   
     })
 })
+*/
 module.exports = c3Router;
 
 /* {
