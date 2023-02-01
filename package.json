@@ -24,7 +24,7 @@
 		"google-spreadsheet": "^2.0.8",
 		"google-spreadsheets": "^2.0.0",
 		"instamojo-nodejs": "0.0.5",
-		"mongoose": "^5.8.4",
+		"mongoose": "^5.13.15",
 		"passport": "^0.4.1",
 		"passport-google-oauth20": "^2.0.0",
 		"passport-local": "^1.0.0",
